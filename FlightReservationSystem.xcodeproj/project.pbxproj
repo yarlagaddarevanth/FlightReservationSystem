@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F204D1DC1BD60460000C164B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DB1BD60460000C164B /* main.m */; };
+		F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DE1BD60460000C164B /* AppDelegate.m */; };
+		F204D1E21BD60460000C164B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1E11BD60460000C164B /* ViewController.m */; };
+		F204D1E51BD60460000C164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204D1E31BD60460000C164B /* Main.storyboard */; };
+		F204D1E81BD60460000C164B /* FlightReservationSystem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F204D1E61BD60460000C164B /* FlightReservationSystem.xcdatamodeld */; };
+		F204D1EA1BD60460000C164B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F204D1E91BD60460000C164B /* Assets.xcassets */; };
+		F204D1ED1BD60460000C164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204D1EB1BD60460000C164B /* LaunchScreen.storyboard */; };
+		F204D1F81BD60460000C164B /* FlightReservationSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1F71BD60460000C164B /* FlightReservationSystemTests.m */; };
+		F204D2031BD60460000C164B /* FlightReservationSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F204D1F41BD60460000C164B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F204D1CF1BD60460000C164B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F204D1D61BD60460000C164B;
+			remoteInfo = FlightReservationSystem;
+		};
+		F204D1FF1BD60460000C164B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F204D1CF1BD60460000C164B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F204D1D61BD60460000C164B;
+			remoteInfo = FlightReservationSystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F204D1D71BD60460000C164B /* FlightReservationSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightReservationSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F204D1DB1BD60460000C164B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F204D1DD1BD60460000C164B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F204D1DE1BD60460000C164B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F204D1E01BD60460000C164B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F204D1E11BD60460000C164B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F204D1E41BD60460000C164B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F204D1E71BD60460000C164B /* FlightReservationSystem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlightReservationSystem.xcdatamodel; sourceTree = "<group>"; };
+		F204D1E91BD60460000C164B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F204D1EC1BD60460000C164B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F204D1EE1BD60460000C164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F204D1F31BD60460000C164B /* FlightReservationSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightReservationSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F204D1F71BD60460000C164B /* FlightReservationSystemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightReservationSystemTests.m; sourceTree = "<group>"; };
+		F204D1F91BD60460000C164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F204D1FE1BD60460000C164B /* FlightReservationSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightReservationSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightReservationSystemUITests.m; sourceTree = "<group>"; };
+		F204D2041BD60460000C164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F204D1D41BD60460000C164B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F204D1F01BD60460000C164B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F204D1FB1BD60460000C164B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F204D1CE1BD60460000C164B = {
+			isa = PBXGroup;
+			children = (
+				F204D1D91BD60460000C164B /* FlightReservationSystem */,
+				F204D1F61BD60460000C164B /* FlightReservationSystemTests */,
+				F204D2011BD60460000C164B /* FlightReservationSystemUITests */,
+				F204D1D81BD60460000C164B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F204D1D81BD60460000C164B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F204D1D71BD60460000C164B /* FlightReservationSystem.app */,
+				F204D1F31BD60460000C164B /* FlightReservationSystemTests.xctest */,
+				F204D1FE1BD60460000C164B /* FlightReservationSystemUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F204D1D91BD60460000C164B /* FlightReservationSystem */ = {
+			isa = PBXGroup;
+			children = (
+				F204D1DD1BD60460000C164B /* AppDelegate.h */,
+				F204D1DE1BD60460000C164B /* AppDelegate.m */,
+				F204D1E01BD60460000C164B /* ViewController.h */,
+				F204D1E11BD60460000C164B /* ViewController.m */,
+				F204D1E31BD60460000C164B /* Main.storyboard */,
+				F204D1E91BD60460000C164B /* Assets.xcassets */,
+				F204D1EB1BD60460000C164B /* LaunchScreen.storyboard */,
+				F204D1EE1BD60460000C164B /* Info.plist */,
+				F204D1E61BD60460000C164B /* FlightReservationSystem.xcdatamodeld */,
+				F204D1DA1BD60460000C164B /* Supporting Files */,
+			);
+			path = FlightReservationSystem;
+			sourceTree = "<group>";
+		};
+		F204D1DA1BD60460000C164B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F204D1DB1BD60460000C164B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F204D1F61BD60460000C164B /* FlightReservationSystemTests */ = {
+			isa = PBXGroup;
+			children = (
+				F204D1F71BD60460000C164B /* FlightReservationSystemTests.m */,
+				F204D1F91BD60460000C164B /* Info.plist */,
+			);
+			path = FlightReservationSystemTests;
+			sourceTree = "<group>";
+		};
+		F204D2011BD60460000C164B /* FlightReservationSystemUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */,
+				F204D2041BD60460000C164B /* Info.plist */,
+			);
+			path = FlightReservationSystemUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F204D1D61BD60460000C164B /* FlightReservationSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F204D2071BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystem" */;
+			buildPhases = (
+				F204D1D31BD60460000C164B /* Sources */,
+				F204D1D41BD60460000C164B /* Frameworks */,
+				F204D1D51BD60460000C164B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlightReservationSystem;
+			productName = FlightReservationSystem;
+			productReference = F204D1D71BD60460000C164B /* FlightReservationSystem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F204D1F21BD60460000C164B /* FlightReservationSystemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F204D20A1BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystemTests" */;
+			buildPhases = (
+				F204D1EF1BD60460000C164B /* Sources */,
+				F204D1F01BD60460000C164B /* Frameworks */,
+				F204D1F11BD60460000C164B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F204D1F51BD60460000C164B /* PBXTargetDependency */,
+			);
+			name = FlightReservationSystemTests;
+			productName = FlightReservationSystemTests;
+			productReference = F204D1F31BD60460000C164B /* FlightReservationSystemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F204D1FD1BD60460000C164B /* FlightReservationSystemUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F204D20D1BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystemUITests" */;
+			buildPhases = (
+				F204D1FA1BD60460000C164B /* Sources */,
+				F204D1FB1BD60460000C164B /* Frameworks */,
+				F204D1FC1BD60460000C164B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F204D2001BD60460000C164B /* PBXTargetDependency */,
+			);
+			name = FlightReservationSystemUITests;
+			productName = FlightReservationSystemUITests;
+			productReference = F204D1FE1BD60460000C164B /* FlightReservationSystemUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F204D1CF1BD60460000C164B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Revanth Kumar";
+				TargetAttributes = {
+					F204D1D61BD60460000C164B = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 45ZRJG229E;
+					};
+					F204D1F21BD60460000C164B = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 45ZRJG229E;
+						TestTargetID = F204D1D61BD60460000C164B;
+					};
+					F204D1FD1BD60460000C164B = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 45ZRJG229E;
+						TestTargetID = F204D1D61BD60460000C164B;
+					};
+				};
+			};
+			buildConfigurationList = F204D1D21BD60460000C164B /* Build configuration list for PBXProject "FlightReservationSystem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F204D1CE1BD60460000C164B;
+			productRefGroup = F204D1D81BD60460000C164B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F204D1D61BD60460000C164B /* FlightReservationSystem */,
+				F204D1F21BD60460000C164B /* FlightReservationSystemTests */,
+				F204D1FD1BD60460000C164B /* FlightReservationSystemUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F204D1D51BD60460000C164B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F204D1ED1BD60460000C164B /* LaunchScreen.storyboard in Resources */,
+				F204D1EA1BD60460000C164B /* Assets.xcassets in Resources */,
+				F204D1E51BD60460000C164B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F204D1F11BD60460000C164B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F204D1FC1BD60460000C164B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F204D1D31BD60460000C164B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F204D1E21BD60460000C164B /* ViewController.m in Sources */,
+				F204D1E81BD60460000C164B /* FlightReservationSystem.xcdatamodeld in Sources */,
+				F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */,
+				F204D1DC1BD60460000C164B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F204D1EF1BD60460000C164B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F204D1F81BD60460000C164B /* FlightReservationSystemTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F204D1FA1BD60460000C164B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F204D2031BD60460000C164B /* FlightReservationSystemUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F204D1F51BD60460000C164B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F204D1D61BD60460000C164B /* FlightReservationSystem */;
+			targetProxy = F204D1F41BD60460000C164B /* PBXContainerItemProxy */;
+		};
+		F204D2001BD60460000C164B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F204D1D61BD60460000C164B /* FlightReservationSystem */;
+			targetProxy = F204D1FF1BD60460000C164B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F204D1E31BD60460000C164B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F204D1E41BD60460000C164B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F204D1EB1BD60460000C164B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F204D1EC1BD60460000C164B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F204D2051BD60460000C164B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F204D2061BD60460000C164B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F204D2081BD60460000C164B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlightReservationSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revanth.FlightReservationSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F204D2091BD60460000C164B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlightReservationSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revanth.FlightReservationSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F204D20B1BD60460000C164B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FlightReservationSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revanth.FlightReservationSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightReservationSystem.app/FlightReservationSystem";
+			};
+			name = Debug;
+		};
+		F204D20C1BD60460000C164B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FlightReservationSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revanth.FlightReservationSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightReservationSystem.app/FlightReservationSystem";
+			};
+			name = Release;
+		};
+		F204D20E1BD60460000C164B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FlightReservationSystemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revanth.FlightReservationSystemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FlightReservationSystem;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F204D20F1BD60460000C164B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FlightReservationSystemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revanth.FlightReservationSystemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FlightReservationSystem;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F204D1D21BD60460000C164B /* Build configuration list for PBXProject "FlightReservationSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F204D2051BD60460000C164B /* Debug */,
+				F204D2061BD60460000C164B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F204D2071BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F204D2081BD60460000C164B /* Debug */,
+				F204D2091BD60460000C164B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F204D20A1BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F204D20B1BD60460000C164B /* Debug */,
+				F204D20C1BD60460000C164B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F204D20D1BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystemUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F204D20E1BD60460000C164B /* Debug */,
+				F204D20F1BD60460000C164B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F204D1E61BD60460000C164B /* FlightReservationSystem.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F204D1E71BD60460000C164B /* FlightReservationSystem.xcdatamodel */,
+			);
+			currentVersion = F204D1E71BD60460000C164B /* FlightReservationSystem.xcdatamodel */;
+			path = FlightReservationSystem.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F204D1CF1BD60460000C164B /* Project object */;
+}
