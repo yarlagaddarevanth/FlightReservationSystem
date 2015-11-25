@@ -1,23 +1,27 @@
 //
-//  FRSSignUpViewController.m
+//  FRSPaymentViewController.m
 //  FlightReservationSystem
 //
 //  Created by Revanth Kumar on 11/25/15.
 //  Copyright © 2015 Revanth Kumar. All rights reserved.
 //
 
-#import "FRSSignUpViewController.h"
+#import "FRSPaymentViewController.h"
 
-@interface FRSSignUpViewController ()
+@interface FRSPaymentViewController ()
 
 @end
 
-@implementation FRSSignUpViewController
+@implementation FRSPaymentViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor yellowColor];
+
 }
+
 -(void)viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:NO];
 }

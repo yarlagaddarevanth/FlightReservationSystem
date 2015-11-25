@@ -20,6 +20,8 @@
 		F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BF1C05957700B91B41 /* FRSSignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C21C05958D00B91B41 /* FRSForgotPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C61C05A52B00B91B41 /* FRSChangePasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F24472CA1C05A96400B91B41 /* FRSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C91C05A96400B91B41 /* FRSHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		F24472C21C05958D00B91B41 /* FRSForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSForgotPasswordViewController.m; sourceTree = "<group>"; };
 		F24472C51C05A52B00B91B41 /* FRSChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSChangePasswordViewController.h; sourceTree = "<group>"; };
 		F24472C61C05A52B00B91B41 /* FRSChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSChangePasswordViewController.m; sourceTree = "<group>"; };
+		F24472C81C05A96400B91B41 /* FRSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSHomeViewController.h; sourceTree = "<group>"; };
+		F24472C91C05A96400B91B41 /* FRSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSHomeViewController.m; sourceTree = "<group>"; };
+		F24472CB1C05C74A00B91B41 /* FRSPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSPaymentViewController.h; sourceTree = "<group>"; };
+		F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSPaymentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				F204D1DE1BD60460000C164B /* AppDelegate.m */,
 				F24472BB1C05955400B91B41 /* FRSBaseViewController.h */,
 				F24472BC1C05955400B91B41 /* FRSBaseViewController.m */,
+				F24472C81C05A96400B91B41 /* FRSHomeViewController.h */,
+				F24472C91C05A96400B91B41 /* FRSHomeViewController.m */,
+				F24472CB1C05C74A00B91B41 /* FRSPaymentViewController.h */,
+				F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */,
 				F24472C41C05970A00B91B41 /* Login - Signup */,
 				F204D1E31BD60460000C164B /* Main.storyboard */,
 				F204D1E91BD60460000C164B /* Assets.xcassets */,
@@ -306,11 +316,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F204D1E21BD60460000C164B /* FRSLandingViewController.m in Sources */,
+				F24472CA1C05A96400B91B41 /* FRSHomeViewController.m in Sources */,
 				F204D1E81BD60460000C164B /* FlightReservationSystem.xcdatamodeld in Sources */,
 				F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */,
 				F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */,
 				F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */,
 				F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */,
+				F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */,
 				F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */,
 				F204D1DC1BD60460000C164B /* main.m in Sources */,
 			);
