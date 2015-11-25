@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F204D1DC1BD60460000C164B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DB1BD60460000C164B /* main.m */; };
 		F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DE1BD60460000C164B /* AppDelegate.m */; };
-		F204D1E21BD60460000C164B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1E11BD60460000C164B /* ViewController.m */; };
+		F204D1E21BD60460000C164B /* FRSLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1E11BD60460000C164B /* FRSLandingViewController.m */; };
 		F204D1E51BD60460000C164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204D1E31BD60460000C164B /* Main.storyboard */; };
 		F204D1E81BD60460000C164B /* FlightReservationSystem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F204D1E61BD60460000C164B /* FlightReservationSystem.xcdatamodeld */; };
 		F204D1EA1BD60460000C164B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F204D1E91BD60460000C164B /* Assets.xcassets */; };
@@ -40,8 +40,8 @@
 		F204D1DB1BD60460000C164B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F204D1DD1BD60460000C164B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F204D1DE1BD60460000C164B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F204D1E01BD60460000C164B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F204D1E11BD60460000C164B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F204D1E01BD60460000C164B /* FRSLandingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRSLandingViewController.h; sourceTree = "<group>"; };
+		F204D1E11BD60460000C164B /* FRSLandingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRSLandingViewController.m; sourceTree = "<group>"; };
 		F204D1E41BD60460000C164B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F204D1E71BD60460000C164B /* FlightReservationSystem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlightReservationSystem.xcdatamodel; sourceTree = "<group>"; };
 		F204D1E91BD60460000C164B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 			children = (
 				F204D1DD1BD60460000C164B /* AppDelegate.h */,
 				F204D1DE1BD60460000C164B /* AppDelegate.m */,
-				F204D1E01BD60460000C164B /* ViewController.h */,
-				F204D1E11BD60460000C164B /* ViewController.m */,
+				F204D1E01BD60460000C164B /* FRSLandingViewController.h */,
+				F204D1E11BD60460000C164B /* FRSLandingViewController.m */,
 				F204D1E31BD60460000C164B /* Main.storyboard */,
 				F204D1E91BD60460000C164B /* Assets.xcassets */,
 				F204D1EB1BD60460000C164B /* LaunchScreen.storyboard */,
@@ -205,6 +205,7 @@
 		F204D1CF1BD60460000C164B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FRS;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Revanth Kumar";
 				TargetAttributes = {
@@ -276,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F204D1E21BD60460000C164B /* ViewController.m in Sources */,
+				F204D1E21BD60460000C164B /* FRSLandingViewController.m in Sources */,
 				F204D1E81BD60460000C164B /* FlightReservationSystem.xcdatamodeld in Sources */,
 				F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */,
 				F204D1DC1BD60460000C164B /* main.m in Sources */,
@@ -503,6 +504,7 @@
 				F204D2091BD60460000C164B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F204D20A1BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystemTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +513,7 @@
 				F204D20C1BD60460000C164B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F204D20D1BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystemUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +522,7 @@
 				F204D20F1BD60460000C164B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

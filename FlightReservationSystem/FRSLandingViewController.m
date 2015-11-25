@@ -6,13 +6,13 @@
 //  Copyright © 2015 Revanth Kumar. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FRSLandingViewController.h"
 
-@interface ViewController ()
+@interface FRSLandingViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FRSLandingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
