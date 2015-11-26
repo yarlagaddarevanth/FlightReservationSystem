@@ -7,7 +7,6 @@
 //
 
 #import "FRSBaseViewController.h"
-
 @interface FRSBaseViewController ()
 
 @end
@@ -17,6 +16,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [TSMessage setDefaultViewController:self];
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A547DD0A78A35B5E13E6F5F5 /* libPods-FlightReservationSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C88DF556FF766C2958CEE15F /* libPods-FlightReservationSystem.a */; };
 		F204D1DC1BD60460000C164B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DB1BD60460000C164B /* main.m */; };
 		F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DE1BD60460000C164B /* AppDelegate.m */; };
 		F204D1E21BD60460000C164B /* FRSLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1E11BD60460000C164B /* FRSLandingViewController.m */; };
@@ -16,12 +17,13 @@
 		F204D1ED1BD60460000C164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204D1EB1BD60460000C164B /* LaunchScreen.storyboard */; };
 		F204D1F81BD60460000C164B /* FlightReservationSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1F71BD60460000C164B /* FlightReservationSystemTests.m */; };
 		F204D2031BD60460000C164B /* FlightReservationSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */; };
-		F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BC1C05955400B91B41 /* FRSBaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BF1C05957700B91B41 /* FRSSignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C21C05958D00B91B41 /* FRSForgotPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C61C05A52B00B91B41 /* FRSChangePasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472CA1C05A96400B91B41 /* FRSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C91C05A96400B91B41 /* FRSHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F23CF8961C0674AF00FD73E3 /* FRSAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F23CF8951C0674AF00FD73E3 /* FRSAlert.m */; };
+		F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BC1C05955400B91B41 /* FRSBaseViewController.m */; };
+		F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BF1C05957700B91B41 /* FRSSignUpViewController.m */; };
+		F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C21C05958D00B91B41 /* FRSForgotPasswordViewController.m */; };
+		F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C61C05A52B00B91B41 /* FRSChangePasswordViewController.m */; };
+		F24472CA1C05A96400B91B41 /* FRSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C91C05A96400B91B41 /* FRSHomeViewController.m */; };
+		F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5043A7DBC88006448061DCF4 /* Pods-FlightReservationSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem.debug.xcconfig"; sourceTree = "<group>"; };
+		87E3375C2BC601BB7E5DA38A /* Pods-FlightReservationSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem.release.xcconfig"; sourceTree = "<group>"; };
+		C88DF556FF766C2958CEE15F /* libPods-FlightReservationSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlightReservationSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F204D1D71BD60460000C164B /* FlightReservationSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightReservationSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F204D1DB1BD60460000C164B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F204D1DD1BD60460000C164B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,6 +64,8 @@
 		F204D1FE1BD60460000C164B /* FlightReservationSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightReservationSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightReservationSystemUITests.m; sourceTree = "<group>"; };
 		F204D2041BD60460000C164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F23CF8941C0674AF00FD73E3 /* FRSAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSAlert.h; sourceTree = "<group>"; };
+		F23CF8951C0674AF00FD73E3 /* FRSAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSAlert.m; sourceTree = "<group>"; };
 		F24472BB1C05955400B91B41 /* FRSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSBaseViewController.h; sourceTree = "<group>"; };
 		F24472BC1C05955400B91B41 /* FRSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSBaseViewController.m; sourceTree = "<group>"; };
 		F24472BE1C05957700B91B41 /* FRSSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSSignUpViewController.h; sourceTree = "<group>"; };
@@ -78,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A547DD0A78A35B5E13E6F5F5 /* libPods-FlightReservationSystem.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +106,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F1B585B3AEA7C31BE19AC03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5043A7DBC88006448061DCF4 /* Pods-FlightReservationSystem.debug.xcconfig */,
+				87E3375C2BC601BB7E5DA38A /* Pods-FlightReservationSystem.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC6D7F386EB5D6CA019914BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C88DF556FF766C2958CEE15F /* libPods-FlightReservationSystem.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F204D1CE1BD60460000C164B = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +130,8 @@
 				F204D1F61BD60460000C164B /* FlightReservationSystemTests */,
 				F204D2011BD60460000C164B /* FlightReservationSystemUITests */,
 				F204D1D81BD60460000C164B /* Products */,
+				8F1B585B3AEA7C31BE19AC03 /* Pods */,
+				CC6D7F386EB5D6CA019914BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +150,8 @@
 			children = (
 				F204D1DD1BD60460000C164B /* AppDelegate.h */,
 				F204D1DE1BD60460000C164B /* AppDelegate.m */,
+				F23CF8941C0674AF00FD73E3 /* FRSAlert.h */,
+				F23CF8951C0674AF00FD73E3 /* FRSAlert.m */,
 				F24472BB1C05955400B91B41 /* FRSBaseViewController.h */,
 				F24472BC1C05955400B91B41 /* FRSBaseViewController.m */,
 				F24472C81C05A96400B91B41 /* FRSHomeViewController.h */,
@@ -188,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F204D2071BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystem" */;
 			buildPhases = (
+				FA6948D74C4FF91BE4D023CA /* Check Pods Manifest.lock */,
 				F204D1D31BD60460000C164B /* Sources */,
 				F204D1D41BD60460000C164B /* Frameworks */,
 				F204D1D51BD60460000C164B /* Resources */,
+				8882E156162A7BE047997BF5 /* Embed Pods Frameworks */,
+				131F3A0E2B877A945D219BD8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +342,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		131F3A0E2B877A945D219BD8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8882E156162A7BE047997BF5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA6948D74C4FF91BE4D023CA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F204D1D31BD60460000C164B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -318,6 +398,7 @@
 				F204D1E21BD60460000C164B /* FRSLandingViewController.m in Sources */,
 				F24472CA1C05A96400B91B41 /* FRSHomeViewController.m in Sources */,
 				F204D1E81BD60460000C164B /* FlightReservationSystem.xcdatamodeld in Sources */,
+				F23CF8961C0674AF00FD73E3 /* FRSAlert.m in Sources */,
 				F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */,
 				F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */,
 				F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */,
@@ -461,23 +542,34 @@
 		};
 		F204D2081BD60460000C164B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5043A7DBC88006448061DCF4 /* Pods-FlightReservationSystem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yarlagadda.revanth@gmail.com (C868FSPG9E)";
 				INFOPLIST_FILE = FlightReservationSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revanth.FlightReservationSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2c031534-e3e0-44d0-ae55-37f8f5883792";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F204D2091BD60460000C164B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E3375C2BC601BB7E5DA38A /* Pods-FlightReservationSystem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FlightReservationSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revanth.FlightReservationSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2c031534-e3e0-44d0-ae55-37f8f5883792";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
