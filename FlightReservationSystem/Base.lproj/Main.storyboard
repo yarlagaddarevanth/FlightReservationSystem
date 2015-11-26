@@ -72,7 +72,7 @@
                                 <rect key="frame" x="206" y="163" width="41" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52n-xJ-K6h">
@@ -82,7 +82,7 @@
                                     <constraint firstAttribute="width" constant="74" id="ZYc-59-DVS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkR-IR-FPz">
@@ -173,7 +173,7 @@
                                     <constraint firstAttribute="height" constant="15" id="Uy6-Gc-zLJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxd-H6-wPU">
@@ -183,7 +183,9 @@
                                     <constraint firstAttribute="height" constant="23" id="PJe-fg-xRP"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="10" height="10"/>
-                                <state key="normal" title="- select -"/>
+                                <connections>
+                                    <action selector="selectFromDestinationButtonTapped:" destination="Fa3-SN-Di8" eventType="touchUpInside" id="lIQ-X7-gyv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5n-JJ-b6E">
                                 <rect key="frame" x="20" y="146" width="19" height="15"/>
@@ -192,7 +194,7 @@
                                     <constraint firstAttribute="height" constant="15" id="VkJ-1k-e6M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj8-vd-yzy">
@@ -202,7 +204,9 @@
                                     <constraint firstAttribute="height" constant="23" id="ndO-WY-Y1p"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="10" height="10"/>
-                                <state key="normal" title="- select -"/>
+                                <connections>
+                                    <action selector="selectToDestinationButtonTapped:" destination="Fa3-SN-Di8" eventType="touchUpInside" id="PvP-mh-5VW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Journey:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNe-fb-fDD">
                                 <rect key="frame" x="20" y="207" width="100.5" height="15"/>
@@ -211,7 +215,7 @@
                                     <constraint firstAttribute="height" constant="15" id="Vfk-R6-aAj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRb-9b-IXc">
@@ -221,7 +225,9 @@
                                     <constraint firstAttribute="height" constant="23" id="vVr-xm-1H4"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="10" height="10"/>
-                                <state key="normal" title="- select -"/>
+                                <connections>
+                                    <action selector="selectDateOfJourneyTapped:" destination="Fa3-SN-Di8" eventType="touchUpInside" id="pJp-7o-PZO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of passengers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rd2-9v-DrK">
                                 <rect key="frame" x="20" y="268" width="141.5" height="21"/>
@@ -230,7 +236,7 @@
                                     <constraint firstAttribute="height" constant="21" id="uoz-Ro-Y3o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asI-KZ-gZl">
@@ -240,7 +246,9 @@
                                     <constraint firstAttribute="height" constant="23" id="V7E-nr-cpN"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="10" height="10"/>
-                                <state key="normal" title="- select -"/>
+                                <connections>
+                                    <action selector="selectNumberOfPassengersButtonTapped:" destination="Fa3-SN-Di8" eventType="touchUpInside" id="p1X-fh-nJE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-JG-rsj">
                                 <rect key="frame" x="20" y="360" width="60" height="23"/>
@@ -254,6 +262,49 @@
                                     <segue destination="xva-93-vpH" kind="show" id="nqA-2g-Pqh"/>
                                 </connections>
                             </button>
+                            <datePicker alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-lT-odW">
+                                <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="KEF-yv-YXg"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="470181560.60631901">
+                                    <!--2015-11-25 21:59:20 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerValueChanged:" destination="Fa3-SN-Di8" eventType="valueChanged" id="e8I-lK-5k5"/>
+                                </connections>
+                            </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmz-4x-bjo">
+                                <rect key="frame" x="0.0" y="406" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Done" id="W3O-0b-gxv">
+                                        <connections>
+                                            <action selector="doneTappedonToolBar:" destination="Fa3-SN-Di8" id="8aw-YR-Vcv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hc-Mj-uKH">
+                                <rect key="frame" x="475" y="350" width="105" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="KH0-q3-Xcg"/>
+                                    <constraint firstAttribute="height" constant="23" id="TcV-Vi-XFn"/>
+                                </constraints>
+                                <state key="normal" title="Search Flights"/>
+                                <connections>
+                                    <action selector="searchFlightsClicked:" destination="Fa3-SN-Di8" eventType="touchUpInside" id="lXq-mU-RNU"/>
+                                </connections>
+                            </button>
+                            <pickerView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LS3-fl-V7H">
+                                <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="OVK-p2-M0a"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fa3-SN-Di8" id="PEt-In-ZXO"/>
+                                    <outlet property="delegate" destination="Fa3-SN-Di8" id="aE9-oZ-Ch2"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -264,30 +315,50 @@
                             <constraint firstItem="W5n-JJ-b6E" firstAttribute="top" secondItem="Rxd-H6-wPU" secondAttribute="bottom" constant="15" id="7a5-bI-baI"/>
                             <constraint firstAttribute="trailing" secondItem="Rxd-H6-wPU" secondAttribute="trailing" constant="20" id="8fZ-XG-fO1"/>
                             <constraint firstItem="hOV-nz-7Uc" firstAttribute="leading" secondItem="ICh-pI-JbO" secondAttribute="leading" constant="20" id="A20-sa-E5d"/>
+                            <constraint firstAttribute="trailing" secondItem="Hmz-4x-bjo" secondAttribute="trailing" id="BkM-89-08K"/>
+                            <constraint firstAttribute="trailing" secondItem="LS3-fl-V7H" secondAttribute="trailing" id="Es8-hv-e6Q"/>
                             <constraint firstItem="GNe-fb-fDD" firstAttribute="leading" secondItem="hOV-nz-7Uc" secondAttribute="leading" id="FJr-JQ-lUw"/>
                             <constraint firstItem="ebs-JG-rsj" firstAttribute="leading" secondItem="hOV-nz-7Uc" secondAttribute="leading" id="FKb-lT-cem"/>
                             <constraint firstItem="Rj8-vd-yzy" firstAttribute="trailing" secondItem="Rxd-H6-wPU" secondAttribute="trailing" id="Rx3-Uc-ahG"/>
                             <constraint firstItem="rRb-9b-IXc" firstAttribute="top" secondItem="GNe-fb-fDD" secondAttribute="bottom" constant="8" id="W69-ND-FZF"/>
-                            <constraint firstItem="ebs-JG-rsj" firstAttribute="top" secondItem="asI-KZ-gZl" secondAttribute="bottom" constant="40" id="WXx-Ha-pig"/>
+                            <constraint firstItem="ebs-JG-rsj" firstAttribute="top" secondItem="asI-KZ-gZl" secondAttribute="bottom" constant="30" id="WXx-Ha-pig"/>
                             <constraint firstItem="Rj8-vd-yzy" firstAttribute="top" secondItem="W5n-JJ-b6E" secondAttribute="bottom" constant="8" id="Wxj-ww-BeC"/>
+                            <constraint firstItem="Hmz-4x-bjo" firstAttribute="leading" secondItem="ICh-pI-JbO" secondAttribute="leading" id="Yde-Xb-5ah"/>
+                            <constraint firstItem="5Hc-Mj-uKH" firstAttribute="top" secondItem="asI-KZ-gZl" secondAttribute="bottom" constant="30" id="YzX-nn-uGH"/>
                             <constraint firstItem="asI-KZ-gZl" firstAttribute="top" secondItem="rd2-9v-DrK" secondAttribute="bottom" constant="8" id="b3C-64-8pk"/>
+                            <constraint firstAttribute="trailing" secondItem="5Hc-Mj-uKH" secondAttribute="trailing" constant="20" id="dj9-iC-h9D"/>
+                            <constraint firstAttribute="trailing" secondItem="zWR-lT-odW" secondAttribute="trailing" id="eFx-V7-lEH"/>
+                            <constraint firstItem="57n-CH-f0x" firstAttribute="top" secondItem="LS3-fl-V7H" secondAttribute="bottom" id="ebM-dj-i2Z"/>
                             <constraint firstItem="asI-KZ-gZl" firstAttribute="leading" secondItem="rRb-9b-IXc" secondAttribute="leading" id="g6E-WO-caC"/>
                             <constraint firstItem="Rxd-H6-wPU" firstAttribute="leading" secondItem="hOV-nz-7Uc" secondAttribute="leading" id="gFx-kQ-Hfw"/>
                             <constraint firstItem="W5n-JJ-b6E" firstAttribute="leading" secondItem="hOV-nz-7Uc" secondAttribute="leading" id="kcV-La-Lwl"/>
+                            <constraint firstItem="LS3-fl-V7H" firstAttribute="leading" secondItem="ICh-pI-JbO" secondAttribute="leading" id="l0T-Nv-5pf"/>
                             <constraint firstItem="rRb-9b-IXc" firstAttribute="trailing" secondItem="Rj8-vd-yzy" secondAttribute="trailing" id="llN-Hf-lRx"/>
+                            <constraint firstAttribute="bottom" secondItem="zWR-lT-odW" secondAttribute="bottom" id="mgR-MV-i2q"/>
                             <constraint firstItem="rRb-9b-IXc" firstAttribute="leading" secondItem="Rj8-vd-yzy" secondAttribute="leading" id="mkl-bN-wlw"/>
+                            <constraint firstItem="zWR-lT-odW" firstAttribute="top" secondItem="Hmz-4x-bjo" secondAttribute="bottom" id="oYN-5N-VsF"/>
                             <constraint firstItem="GNe-fb-fDD" firstAttribute="top" secondItem="Rj8-vd-yzy" secondAttribute="bottom" constant="15" id="q3c-tP-QMR"/>
                             <constraint firstItem="asI-KZ-gZl" firstAttribute="trailing" secondItem="rRb-9b-IXc" secondAttribute="trailing" id="q4V-mr-mSM"/>
+                            <constraint firstItem="zWR-lT-odW" firstAttribute="leading" secondItem="ICh-pI-JbO" secondAttribute="leading" id="smE-1Y-Ufx"/>
                             <constraint firstItem="rd2-9v-DrK" firstAttribute="top" secondItem="rRb-9b-IXc" secondAttribute="bottom" constant="15" id="vRp-ty-pVe"/>
                             <constraint firstItem="rd2-9v-DrK" firstAttribute="leading" secondItem="GNe-fb-fDD" secondAttribute="leading" id="yBo-Hr-QHg"/>
+                            <constraint firstItem="zWR-lT-odW" firstAttribute="top" secondItem="Hmz-4x-bjo" secondAttribute="bottom" id="zJR-Zz-uEF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zJR-Zz-uEF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="aQy-Vo-ZTz"/>
                     <connections>
+                        <outlet property="datePicker" destination="zWR-lT-odW" id="Iyp-3N-SXJ"/>
+                        <outlet property="pickerView" destination="LS3-fl-V7H" id="TW1-KZ-89y"/>
                         <outlet property="selectDateButton" destination="rRb-9b-IXc" id="zNB-Nx-srE"/>
                         <outlet property="selectFromDestButton" destination="Rxd-H6-wPU" id="Gw2-o9-8i3"/>
                         <outlet property="selectNumberofPassengersButton" destination="asI-KZ-gZl" id="0mC-8T-Fab"/>
                         <outlet property="selectToDestinationButton" destination="Rj8-vd-yzy" id="Kbl-5T-iYo"/>
+                        <outlet property="toolBar" destination="Hmz-4x-bjo" id="W7N-Nr-ohC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hh6-LG-nR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,7 +385,7 @@
                                     <constraint firstAttribute="width" constant="65" id="bMu-aH-LAB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z4R-eN-J91">
@@ -632,7 +703,7 @@
                                 <rect key="frame" x="20" y="186" width="41" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m7G-gi-yXL">
@@ -656,7 +727,7 @@
                                 <rect key="frame" x="20" y="251" width="560" height="14.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKf-Yb-HR4">
@@ -710,7 +781,7 @@
                                 <rect key="frame" x="20" y="88" width="160.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Temporary Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMu-dJ-SWl">
@@ -723,7 +794,7 @@
                                 <rect key="frame" x="20" y="158" width="112.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ibi-dq-raB">
@@ -736,7 +807,7 @@
                                 <rect key="frame" x="20" y="229" width="139.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mhw-vP-QSx">
@@ -800,7 +871,7 @@
                                 <rect key="frame" x="20" y="79" width="41" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DyW-jp-y1G">
@@ -813,7 +884,7 @@
                                 <rect key="frame" x="20" y="149" width="74" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S8G-yd-Sbw">
@@ -826,7 +897,7 @@
                                 <rect key="frame" x="20" y="220" width="139.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gT-uE-9iG">
@@ -839,7 +910,7 @@
                                 <rect key="frame" x="20" y="291" width="45" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVq-Bp-TKh">

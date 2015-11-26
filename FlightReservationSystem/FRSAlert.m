@@ -1,14 +1,14 @@
 //
-//  FRSBaseViewController.h
+//  FRSAlert.m
 //  FlightReservationSystem
 //
 //  Created by Revanth Kumar on 11/25/15.
 //  Copyright © 2015 Revanth Kumar. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <TSMessages/TSMessage.h>
+#import "FRSAlert.h"
 
-@interface FRSBaseViewController : UIViewController
+@implementation FRSAlert
+
 
 @end
