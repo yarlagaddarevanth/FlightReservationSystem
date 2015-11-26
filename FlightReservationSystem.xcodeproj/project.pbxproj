@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6F5732E1C0677010049594A /* FRSAdminHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F5732D1C0677010049594A /* FRSAdminHomeViewController.m */; };
+		B6F573311C0680130049594A /* FRSManageFlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F573301C0680130049594A /* FRSManageFlightViewController.m */; };
+		B6F573341C0684890049594A /* FRSManageDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F573331C0684890049594A /* FRSManageDestinationViewController.m */; };
 		F204D1DC1BD60460000C164B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DB1BD60460000C164B /* main.m */; };
 		F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DE1BD60460000C164B /* AppDelegate.m */; };
 		F204D1E21BD60460000C164B /* FRSLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1E11BD60460000C164B /* FRSLandingViewController.m */; };
@@ -16,12 +19,12 @@
 		F204D1ED1BD60460000C164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204D1EB1BD60460000C164B /* LaunchScreen.storyboard */; };
 		F204D1F81BD60460000C164B /* FlightReservationSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1F71BD60460000C164B /* FlightReservationSystemTests.m */; };
 		F204D2031BD60460000C164B /* FlightReservationSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */; };
-		F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BC1C05955400B91B41 /* FRSBaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BF1C05957700B91B41 /* FRSSignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C21C05958D00B91B41 /* FRSForgotPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C61C05A52B00B91B41 /* FRSChangePasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472CA1C05A96400B91B41 /* FRSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C91C05A96400B91B41 /* FRSHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BC1C05955400B91B41 /* FRSBaseViewController.m */; };
+		F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BF1C05957700B91B41 /* FRSSignUpViewController.m */; };
+		F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C21C05958D00B91B41 /* FRSForgotPasswordViewController.m */; };
+		F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C61C05A52B00B91B41 /* FRSChangePasswordViewController.m */; };
+		F24472CA1C05A96400B91B41 /* FRSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C91C05A96400B91B41 /* FRSHomeViewController.m */; };
+		F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6F5732C1C0677010049594A /* FRSAdminHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSAdminHomeViewController.h; sourceTree = "<group>"; };
+		B6F5732D1C0677010049594A /* FRSAdminHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSAdminHomeViewController.m; sourceTree = "<group>"; };
+		B6F5732F1C0680130049594A /* FRSManageFlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSManageFlightViewController.h; sourceTree = "<group>"; };
+		B6F573301C0680130049594A /* FRSManageFlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSManageFlightViewController.m; sourceTree = "<group>"; };
+		B6F573321C0684890049594A /* FRSManageDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSManageDestinationViewController.h; sourceTree = "<group>"; };
+		B6F573331C0684890049594A /* FRSManageDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSManageDestinationViewController.m; sourceTree = "<group>"; };
 		F204D1D71BD60460000C164B /* FlightReservationSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightReservationSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F204D1DB1BD60460000C164B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F204D1DD1BD60460000C164B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +138,12 @@
 				F24472C91C05A96400B91B41 /* FRSHomeViewController.m */,
 				F24472CB1C05C74A00B91B41 /* FRSPaymentViewController.h */,
 				F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */,
+				B6F5732C1C0677010049594A /* FRSAdminHomeViewController.h */,
+				B6F5732D1C0677010049594A /* FRSAdminHomeViewController.m */,
+				B6F5732F1C0680130049594A /* FRSManageFlightViewController.h */,
+				B6F573301C0680130049594A /* FRSManageFlightViewController.m */,
+				B6F573321C0684890049594A /* FRSManageDestinationViewController.h */,
+				B6F573331C0684890049594A /* FRSManageDestinationViewController.m */,
 				F24472C41C05970A00B91B41 /* Login - Signup */,
 				F204D1E31BD60460000C164B /* Main.storyboard */,
 				F204D1E91BD60460000C164B /* Assets.xcassets */,
@@ -320,11 +335,14 @@
 				F204D1E81BD60460000C164B /* FlightReservationSystem.xcdatamodeld in Sources */,
 				F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */,
 				F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */,
+				B6F573341C0684890049594A /* FRSManageDestinationViewController.m in Sources */,
 				F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */,
+				B6F5732E1C0677010049594A /* FRSAdminHomeViewController.m in Sources */,
 				F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */,
 				F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */,
 				F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */,
 				F204D1DC1BD60460000C164B /* main.m in Sources */,
+				B6F573311C0680130049594A /* FRSManageFlightViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
