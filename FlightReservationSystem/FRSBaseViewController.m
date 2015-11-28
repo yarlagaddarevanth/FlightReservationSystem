@@ -18,7 +18,29 @@
     // Do any additional setup after loading the view.
     [TSMessage setDefaultViewController:self];
 
+    //Tap Gesture
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(tap:)];
+    tap.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tap];
 }
+
+-(void)tap:(UITapGestureRecognizer *)sender{
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        [self removeKeyBoard];
+    }
+}
+-(void)removeKeyBoard
+{
+    //    [self MoveScrollViewToDown];
+    for (UITextField *tf in self.view.subviews)
+    {
+        if ([tf isKindOfClass:[UITextField class]]) {
+            [tf resignFirstResponder];
+        }
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
