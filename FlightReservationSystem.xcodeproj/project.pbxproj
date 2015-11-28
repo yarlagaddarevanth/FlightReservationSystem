@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A547DD0A78A35B5E13E6F5F5 /* libPods-FlightReservationSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C88DF556FF766C2958CEE15F /* libPods-FlightReservationSystem.a */; };
 		B6F5732E1C0677010049594A /* FRSAdminHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F5732D1C0677010049594A /* FRSAdminHomeViewController.m */; };
 		B6F573311C0680130049594A /* FRSManageFlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F573301C0680130049594A /* FRSManageFlightViewController.m */; };
 		B6F573341C0684890049594A /* FRSManageDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F573331C0684890049594A /* FRSManageDestinationViewController.m */; };
@@ -19,6 +20,7 @@
 		F204D1ED1BD60460000C164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204D1EB1BD60460000C164B /* LaunchScreen.storyboard */; };
 		F204D1F81BD60460000C164B /* FlightReservationSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1F71BD60460000C164B /* FlightReservationSystemTests.m */; };
 		F204D2031BD60460000C164B /* FlightReservationSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */; };
+		F23CF8961C0674AF00FD73E3 /* FRSAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F23CF8951C0674AF00FD73E3 /* FRSAlert.m */; };
 		F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BC1C05955400B91B41 /* FRSBaseViewController.m */; };
 		F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BF1C05957700B91B41 /* FRSSignUpViewController.m */; };
 		F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C21C05958D00B91B41 /* FRSForgotPasswordViewController.m */; };
@@ -45,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5043A7DBC88006448061DCF4 /* Pods-FlightReservationSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem.debug.xcconfig"; sourceTree = "<group>"; };
+		87E3375C2BC601BB7E5DA38A /* Pods-FlightReservationSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem.release.xcconfig"; sourceTree = "<group>"; };
+		C88DF556FF766C2958CEE15F /* libPods-FlightReservationSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlightReservationSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F5732C1C0677010049594A /* FRSAdminHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSAdminHomeViewController.h; sourceTree = "<group>"; };
 		B6F5732D1C0677010049594A /* FRSAdminHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSAdminHomeViewController.m; sourceTree = "<group>"; };
 		B6F5732F1C0680130049594A /* FRSManageFlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSManageFlightViewController.h; sourceTree = "<group>"; };

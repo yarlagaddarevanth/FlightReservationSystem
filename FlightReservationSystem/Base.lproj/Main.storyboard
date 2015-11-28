@@ -251,7 +251,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-JG-rsj">
-                                <rect key="frame" x="20" y="360" width="60" height="23"/>
+                                <rect key="frame" x="20" y="350" width="60" height="23"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="OPS-Ke-ssz"/>
@@ -264,6 +264,7 @@
                             </button>
                             <datePicker alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-lT-odW">
                                 <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="KEF-yv-YXg"/>
                                 </constraints>
@@ -276,6 +277,7 @@
                             </datePicker>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmz-4x-bjo">
                                 <rect key="frame" x="0.0" y="406" width="600" height="44"/>
+                                <animations/>
                                 <items>
                                     <barButtonItem title="Done" id="W3O-0b-gxv">
                                         <connections>
@@ -286,6 +288,7 @@
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hc-Mj-uKH">
                                 <rect key="frame" x="475" y="350" width="105" height="23"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="KH0-q3-Xcg"/>
                                     <constraint firstAttribute="height" constant="23" id="TcV-Vi-XFn"/>
@@ -297,6 +300,7 @@
                             </button>
                             <pickerView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LS3-fl-V7H">
                                 <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="OVK-p2-M0a"/>
                                 </constraints>
@@ -580,8 +584,8 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="hzs-5M-qkI"/>
                                         <exclude reference="ZYQ-do-Yls"/>
+                                        <exclude reference="hzs-5M-qkI"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -602,8 +606,8 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Bz2-pm-A6l"/>
                                         <exclude reference="A4i-jP-HdS"/>
+                                        <exclude reference="Bz2-pm-A6l"/>
                                     </mask>
                                 </variation>
                                 <connections>
