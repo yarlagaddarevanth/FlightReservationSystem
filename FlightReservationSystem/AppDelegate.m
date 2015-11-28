@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FRSNetworkingManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    if ([USER_DEFAULTS valueForKey:JSESSIONID_KEY]) {
+        
+        //get User Details
+        [[FRSNetworkingManager sharedNetworkingManager] getUserDetailsWithCompletionBlock:^(id response, NSError *error) {
+            if (!error) {
+                FRSUser *user = (FRSUser *)response;
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:USER_PROFILE_UPDATED_NOTIFICATION object:user];
+
+                [self.window.rootViewController performSegueWithIdentifier:SeguePushHome sender:nil];
+
+            }
+            
+        }];
+        
+    }
+    
+        
 
     return YES;
 }

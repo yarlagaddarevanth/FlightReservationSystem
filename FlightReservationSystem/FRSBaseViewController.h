@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <TSMessages/TSMessage.h>
+#import "FRSProgressHUD.h"
+#import "FRSNetworkingManager.h"
+#import "FRSResponseModel.h"
 
 @interface FRSBaseViewController : UIViewController
+
+-(void)removeKeyBoard;
 
 @end
