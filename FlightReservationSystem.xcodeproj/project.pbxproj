@@ -21,6 +21,8 @@
 		F204D1ED1BD60460000C164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204D1EB1BD60460000C164B /* LaunchScreen.storyboard */; };
 		F204D1F81BD60460000C164B /* FlightReservationSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1F71BD60460000C164B /* FlightReservationSystemTests.m */; };
 		F204D2031BD60460000C164B /* FlightReservationSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */; };
+		F222FAF21C0A8281001F6919 /* FRSFlightInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FAF11C0A8281001F6919 /* FRSFlightInfoView.m */; };
+		F222FAF41C0A82A9001F6919 /* FRSFlightInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F222FAF31C0A82A9001F6919 /* FRSFlightInfoView.xib */; };
 		F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BC1C05955400B91B41 /* FRSBaseViewController.m */; };
 		F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472BF1C05957700B91B41 /* FRSSignUpViewController.m */; };
 		F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C21C05958D00B91B41 /* FRSForgotPasswordViewController.m */; };
@@ -82,6 +84,9 @@
 		F204D1FE1BD60460000C164B /* FlightReservationSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightReservationSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightReservationSystemUITests.m; sourceTree = "<group>"; };
 		F204D2041BD60460000C164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F222FAF01C0A8281001F6919 /* FRSFlightInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSFlightInfoView.h; sourceTree = "<group>"; };
+		F222FAF11C0A8281001F6919 /* FRSFlightInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSFlightInfoView.m; sourceTree = "<group>"; };
+		F222FAF31C0A82A9001F6919 /* FRSFlightInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRSFlightInfoView.xib; sourceTree = "<group>"; };
 		F23CF8941C0674AF00FD73E3 /* FRSAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSAlert.h; sourceTree = "<group>"; };
 		F23CF8951C0674AF00FD73E3 /* FRSAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSAlert.m; sourceTree = "<group>"; };
 		F24472BB1C05955400B91B41 /* FRSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSBaseViewController.h; sourceTree = "<group>"; };
@@ -186,6 +191,9 @@
 				F204D1DE1BD60460000C164B /* AppDelegate.m */,
 				F2CB44421C07B799008E6134 /* NSString+Validity.h */,
 				F2CB44431C07B799008E6134 /* NSString+Validity.m */,
+				F222FAF01C0A8281001F6919 /* FRSFlightInfoView.h */,
+				F222FAF11C0A8281001F6919 /* FRSFlightInfoView.m */,
+				F222FAF31C0A82A9001F6919 /* FRSFlightInfoView.xib */,
 				F2CB44401C07B2FE008E6134 /* Models */,
 				F2CB44411C07B312008E6134 /* Networking Manager */,
 				F23CF8941C0674AF00FD73E3 /* FRSAlert.h */,
@@ -396,6 +404,7 @@
 			files = (
 				F204D1ED1BD60460000C164B /* LaunchScreen.storyboard in Resources */,
 				F204D1EA1BD60460000C164B /* Assets.xcassets in Resources */,
+				F222FAF41C0A82A9001F6919 /* FRSFlightInfoView.xib in Resources */,
 				F204D1E51BD60460000C164B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +494,7 @@
 				F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */,
 				F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */,
 				F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */,
+				F222FAF21C0A8281001F6919 /* FRSFlightInfoView.m in Sources */,
 				F204D1DC1BD60460000C164B /* main.m in Sources */,
 				F2CB443C1C07B2E6008E6134 /* FRSBaseModel.m in Sources */,
 				B6019EAF1C0A7FAE006BBE92 /* FRSReservationStep2Viewcontroller.m in Sources */,
