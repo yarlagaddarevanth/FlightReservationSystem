@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JsE-Li-iJq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JsE-Li-iJq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -232,17 +232,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRb-9b-IXc">
-                                <rect key="frame" x="20" y="230" width="560" height="23"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="vVr-xm-1H4"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="10" height="10"/>
-                                <connections>
-                                    <action selector="selectDateOfJourneyTapped:" destination="Fa3-SN-Di8" eventType="touchUpInside" id="pJp-7o-PZO"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of passengers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rd2-9v-DrK">
                                 <rect key="frame" x="20" y="268" width="141.5" height="21"/>
                                 <animations/>
@@ -323,11 +312,31 @@
                                     <outlet property="delegate" destination="Fa3-SN-Di8" id="aE9-oZ-Ch2"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRb-9b-IXc">
+                                <rect key="frame" x="20" y="230" width="560" height="23"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="vVr-xm-1H4"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="10" height="10"/>
+                                <connections>
+                                    <action selector="selectDateOfJourneyTapped:" destination="Fa3-SN-Di8" eventType="touchUpInside" id="pJp-7o-PZO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj6-xN-gXc">
+                                <rect key="frame" x="20" y="376" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="2Vb-6C-cLd" kind="show" id="Ucv-hX-j4w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rxd-H6-wPU" firstAttribute="top" secondItem="hOV-nz-7Uc" secondAttribute="bottom" constant="8" id="17O-6x-RmL"/>
+                            <constraint firstItem="yj6-xN-gXc" firstAttribute="leading" secondItem="ebs-JG-rsj" secondAttribute="leading" id="1hC-Eb-N8b"/>
                             <constraint firstItem="hOV-nz-7Uc" firstAttribute="top" secondItem="aSK-aE-RII" secondAttribute="bottom" constant="21" id="2Fo-zm-Y30"/>
                             <constraint firstItem="Rj8-vd-yzy" firstAttribute="leading" secondItem="hOV-nz-7Uc" secondAttribute="leading" id="2zI-wf-CRz"/>
                             <constraint firstItem="W5n-JJ-b6E" firstAttribute="top" secondItem="Rxd-H6-wPU" secondAttribute="bottom" constant="15" id="7a5-bI-baI"/>
@@ -345,6 +354,7 @@
                             <constraint firstItem="5Hc-Mj-uKH" firstAttribute="top" secondItem="asI-KZ-gZl" secondAttribute="bottom" constant="30" id="YzX-nn-uGH"/>
                             <constraint firstItem="asI-KZ-gZl" firstAttribute="top" secondItem="rd2-9v-DrK" secondAttribute="bottom" constant="8" id="b3C-64-8pk"/>
                             <constraint firstAttribute="trailing" secondItem="5Hc-Mj-uKH" secondAttribute="trailing" constant="20" id="dj9-iC-h9D"/>
+                            <constraint firstItem="yj6-xN-gXc" firstAttribute="bottom" secondItem="Hmz-4x-bjo" secondAttribute="top" id="dzC-C4-st9"/>
                             <constraint firstAttribute="trailing" secondItem="zWR-lT-odW" secondAttribute="trailing" id="eFx-V7-lEH"/>
                             <constraint firstItem="57n-CH-f0x" firstAttribute="top" secondItem="LS3-fl-V7H" secondAttribute="bottom" id="ebM-dj-i2Z"/>
                             <constraint firstItem="asI-KZ-gZl" firstAttribute="leading" secondItem="rRb-9b-IXc" secondAttribute="leading" id="g6E-WO-caC"/>
@@ -571,6 +581,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36P-3S-ycr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1969" y="1859"/>
+        </scene>
+        <!--Reservation Step2 Viewcontroller-->
+        <scene sceneID="I9x-B6-5fr">
+            <objects>
+                <viewController id="2Vb-6C-cLd" customClass="FRSReservationStep2Viewcontroller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SCI-IL-aKk"/>
+                        <viewControllerLayoutGuide type="bottom" id="AsY-MO-LLl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W1b-cZ-5y4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFI-3w-3fa">
+                                <rect key="frame" x="254" y="114" width="92" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dFI-3w-3fa" firstAttribute="top" secondItem="SCI-IL-aKk" secondAttribute="bottom" constant="50" id="AqC-mN-XOR"/>
+                            <constraint firstItem="dFI-3w-3fa" firstAttribute="leading" secondItem="W1b-cZ-5y4" secondAttribute="leading" constant="254" id="VaG-hB-fHh"/>
+                            <constraint firstItem="AsY-MO-LLl" firstAttribute="top" secondItem="dFI-3w-3fa" secondAttribute="bottom" constant="465" id="sbm-Bs-DAy"/>
+                            <constraint firstAttribute="trailing" secondItem="dFI-3w-3fa" secondAttribute="trailing" constant="254" id="yTt-7s-Pej"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Obk-9c-FHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1998" y="1088"/>
         </scene>
         <!--Admin Home View Controller-->
         <scene sceneID="xdQ-3C-2Uh">
@@ -953,6 +997,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITT-cf-r85">
                                 <rect key="frame" x="20" y="361" width="82" height="20.5"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="kHF-7j-USq"/>
                                 </constraints>
@@ -962,6 +1007,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BW2-lY-jOH">
                                 <rect key="frame" x="20" y="386" width="560" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bbz-lA-3dL"/>
                                 </constraints>
