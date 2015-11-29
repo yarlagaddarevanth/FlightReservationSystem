@@ -31,57 +31,37 @@
 }
 
 - (IBAction)signUpTapped:(id)sender {
-    if ([self signinFormValidation]) {
+    if ([self signUpFormValidation]) {
+        
         FRSProgressHUD *HUD = [[FRSProgressHUD alloc] initWithView:self.view showAnimated:YES];
         
         NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:
                                     _emailTextField.text, @"email",
+                                    _emailTextField.text, @"userName",
+                                    USER_ROLE_USER, @"role",
                                     _passwordTextField.text, @"password",
                                     _firstNameTextField.text, @"firstName",
                                     _lastNameTextField.text, @"lastName",
                                     nil];
         
-        [[FRSNetworkingManager sharedNetworkingManager] signInWithUsername:_emailTextField.text andPassword:_passwordTextField.text  completionBlock:^(id response, NSError *error) {
+        
+        [[FRSNetworkingManager sharedNetworkingManager] signUpUserWithParameters:parameters completionBlock:^(id response, NSError *error) {
+            
             [HUD hide:NO];
             
-            if (error ||[response isKindOfClass:[FRSResponseModel class]]) {
-                FRSResponseModel *result = (FRSResponseModel *)response;
-                if (error || !result.success) {
-                    //need to handle more effectively...
-                    
-                    return;
-                }
-                
-            }
-            //send FRSUser or FRSLoginResponse obj
-            FRSLoginResponse *loggedInUser = (FRSLoginResponse *) response;
-            if (loggedInUser) {
-                
-                //get User Details
-                [[FRSNetworkingManager sharedNetworkingManager] getUserDetailsWithCompletionBlock:^(id response, NSError *error) {
-                    if (!error) {
-                        FRSUser *user = (FRSUser *)response;
-                        
-                        [[NSNotificationCenter defaultCenter] postNotificationName:USER_PROFILE_UPDATED_NOTIFICATION object:user];
-                    }
-                    
-                }];
-                
-                
-                
-                [self removeKeyBoard];
-                //                [SHARED_APP_DELEGATE updateAccessTokenExpiry];
-                //                [USER_DEFAULTS setValue:loggedInUser.loginResponse.access_token forKey:USER_ACCESS_TOKEN];
-                
-                //                [USER_DEFAULTS setValue:[(FRSUser *)response getUserDictionaryOfModel] forKey:USER_PROFILE];
-                [self performSegueWithIdentifier:SeguePushHome sender:nil];
-            }
+            [TSMessage showNotificationWithTitle:@"Success" subtitle:@"You're now signed up. Please Sign in now." type:TSMessageNotificationTypeSuccess];
+            
+            [self performSelector:@selector(goBackToSignInScreen) withObject:nil afterDelay:1.0];
+            
         }];
         
     }
 }
 
--(BOOL)signinFormValidation{
+-(void)goBackToSignInScreen{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+-(BOOL)signUpFormValidation{
     BOOL isValid = YES;
     if (![_emailTextField.text isValidEmail]) {
         if (_emailTextField.text.length == 0) {
@@ -94,7 +74,8 @@
                                             type:TSMessageNotificationTypeWarning];
         
         isValid = NO;
-    }else if (![_passwordTextField.text isValidPassword]){
+    }
+    else if (![_passwordTextField.text isValidPassword]){
         if (_passwordTextField.text.length == 0) {
             [TSMessage showNotificationWithTitle:@"Password"
                                         subtitle:@"Please enter your password."
@@ -107,6 +88,37 @@
         
         isValid = NO;
     }
+    else if (![_confirmPasswordTextField.text isValidPassword]){
+        if (_confirmPasswordTextField.text.length == 0) {
+            [TSMessage showNotificationWithTitle:@"Confirm Password"
+                                        subtitle:@"Please enter a valid password."
+                                            type:TSMessageNotificationTypeWarning];
+            
+        }else if (![_passwordTextField.text isEqualToString:_confirmPasswordTextField.text]){
+            [TSMessage showNotificationWithTitle:@"Passwords not Matching"
+                                        subtitle:@"Password and Confirm Password do not match."
+                                            type:TSMessageNotificationTypeWarning];
+
+        }
+        else [TSMessage showNotificationWithTitle:@"Confirm Password"
+                                        subtitle:@"Please re-enter your password in the Confirm Password field."
+                                            type:TSMessageNotificationTypeWarning];
+        
+        isValid = NO;
+    }
+    else if (![_firstNameTextField.text isValid]){
+        [TSMessage showNotificationWithTitle:@"First Name"
+                                    subtitle:@"Please enter your First Name."
+                                        type:TSMessageNotificationTypeWarning];
+        isValid = NO;
+    }
+    else if (![_lastNameTextField.text isValid]){
+        [TSMessage showNotificationWithTitle:@"Last Name"
+                                    subtitle:@"Please enter your Last Name."
+                                        type:TSMessageNotificationTypeWarning];
+        isValid = NO;
+    }
+
     return  isValid;
 }
 
@@ -123,13 +135,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

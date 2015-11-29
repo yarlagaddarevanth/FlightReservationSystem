@@ -20,9 +20,8 @@
 
 #define FRS_API_USER FRS_API_BASE_HOST "/" FRS_API_USER_APP
 
-#define USER_GET_USER_DETAILS_URL FRS_API_USER ""
+#define USER_API FRS_API_USER ""
 #define USER_SIGNIN_URL FRS_API_USER "/login"
-#define USER_SIGNUP_URL FRS_API_USER "/create"
 #define USER_FORGOT_PASSWORD_URL FRS_API_USER "/forgot_password"
 #define USER_RESET_PASSWORD_URL FRS_API_USER "/reset_password"
 
@@ -47,8 +46,9 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
 -(void)signUpUserWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion{
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
-    [manager POST:USER_SIGNUP_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:USER_API parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //NSLog(@"%s create JSON: %@", __PRETTY_FUNCTION__,responseObject);
         FRSResponseModel *response = [self success:responseObject];
         if (response.success) {
@@ -178,7 +178,7 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
     [manager.requestSerializer setValue:JSESSIONID forHTTPHeaderField:JSESSIONID_KEY];
 
     
-    [manager GET:USER_GET_USER_DETAILS_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:USER_API parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //NSLog(@"%s getUserDetailsWithCompletionBlock JSON: %@",__PRETTY_FUNCTION__, responseObject);
         
         FRSResponseModel *response = [self success:responseObject];

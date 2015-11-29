@@ -16,7 +16,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [TSMessage setDefaultViewController:self];
+    if(self.navigationController){
+        [TSMessage setDefaultViewController:self.navigationController];
+    }
+    else {
+        [TSMessage setDefaultViewController:self];
+    }
+        
 
     //Tap Gesture
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
