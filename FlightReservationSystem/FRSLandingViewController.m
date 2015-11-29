@@ -7,6 +7,7 @@
 //
 
 #import "FRSLandingViewController.h"
+#import "AppDelegate.h"
 
 @interface FRSLandingViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -53,7 +54,7 @@
                 [[FRSNetworkingManager sharedNetworkingManager] getUserDetailsWithCompletionBlock:^(id response, NSError *error) {
                     if (!error) {
                         FRSUser *user = (FRSUser *)response;
-                        
+                        [SHARED_APP_DELEGATE setLoggedInUser:user];
                         [[NSNotificationCenter defaultCenter] postNotificationName:USER_PROFILE_UPDATED_NOTIFICATION object:user];
                     }
 
