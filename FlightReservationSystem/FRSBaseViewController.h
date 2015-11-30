@@ -11,9 +11,13 @@
 #import "FRSProgressHUD.h"
 #import "FRSNetworkingManager.h"
 #import "FRSResponseModel.h"
+#import "FRSAirportsResponse.h"
+#import "FRSFlight.h"
+#import "FRSReservation.h"
 
 @interface FRSBaseViewController : UIViewController
 
+@property (nonatomic) UITapGestureRecognizer *tap;
 -(void)removeKeyBoard;
 
 @end

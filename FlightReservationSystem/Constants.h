@@ -20,6 +20,9 @@
 
 //Segues
 #define SeguePushHome @"SeguePushHome"
+#define SeguePushAvailableFlightsList @"SeguePushAvailableFlightsList"
+#define SegueShowReservationStep2 @"SegueShowReservationStep2"
+#define SegueShowPayment @"SegueShowPayment"
 
 #define JSESSIONID_KEY @"JSESSIONID"
 #define JSESSIONID [USER_DEFAULTS valueForKey:JSESSIONID_KEY]

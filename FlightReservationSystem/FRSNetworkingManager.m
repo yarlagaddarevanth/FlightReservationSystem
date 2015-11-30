@@ -10,6 +10,10 @@
 #import <AFNetworking/AFNetworking.h>
 #import "FRSResponseModel.h"
 #import "FRSLoginResponse.h"
+#import "FRSAirportsResponse.h"
+#import "FRSSearchFlightsResponse.h"
+#import "FRSFlight.h"
+
 #import <TSMessages/TSMessage.h>
 
 @class AppDelegate;
@@ -24,6 +28,9 @@
 #define USER_SIGNIN_URL FRS_API_USER "/login"
 #define USER_FORGOT_PASSWORD_URL FRS_API_USER "/forgot_password"
 #define USER_RESET_PASSWORD_URL FRS_API_USER "/reset_password"
+#define USER_GET_AIRPORTS_URL FRS_API_USER "/getAirports"
+#define USER_SEARCH_FLIGHTS_URL FRS_API_USER "/find"
+#define USER_RESERVE_FLIGHT_URL FRS_API_USER "/reserve"
 
 
 typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
@@ -205,7 +212,90 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
     
 }
 
-#pragma - mark mark Helpers
+#pragma mark Airports
+-(void)getAirportsWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager.requestSerializer setValue:JSESSIONID forHTTPHeaderField:JSESSIONID_KEY];
+
+    [manager GET:USER_GET_AIRPORTS_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        FRSResponseModel *response = [self success:responseObject];
+        if (response.success) {
+            FRSAirportsResponse *airportsResponse = [[FRSAirportsResponse alloc] initWithDictionary:response.data error:nil];
+            parsingCompletion(airportsResponse, nil);
+            return ;
+        }
+        else [self handleAPIFailure:response];
+        
+        //coFRSon for API success or failure. SO check API falure in the call back also
+        parsingCompletion(response, nil);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        parsingCompletion(nil, error);
+        if (operation.responseString) {
+            [self handleServerFailure:operation];
+        }
+    }];
+    
+}
+
+#pragma mark Airports
+-(void)searchFlightsWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager.requestSerializer setValue:JSESSIONID forHTTPHeaderField:JSESSIONID_KEY];
+    
+    [manager GET:USER_SEARCH_FLIGHTS_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        FRSResponseModel *response = [self success:responseObject];
+        if (response.success) {
+            FRSSearchFlightsResponse *searchFlightsResponse = [[FRSSearchFlightsResponse alloc] initWithDictionary:response.data error:nil];
+            parsingCompletion(searchFlightsResponse, nil);
+            return ;
+            return ;
+        }
+        else [self handleAPIFailure:response];
+        
+        //coFRSon for API success or failure. SO check API falure in the call back also
+        parsingCompletion(response, nil);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        parsingCompletion(nil, error);
+        if (operation.responseString) {
+            [self handleServerFailure:operation];
+        }
+    }];
+    
+}
+
+#pragma mark - Reserve
+
+-(void)reserveTicketWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager POST:USER_RESERVE_FLIGHT_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+        FRSResponseModel *response = [self success:responseObject];
+        if (response.success) {
+            
+        }
+        else [self handleAPIFailure:response];
+        
+        //coFRSon for API success or failure. SO check API falure in the call back also
+        parsingCompletion(response, nil);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+
+        parsingCompletion(nil, error);
+        if (operation.responseString) {
+            [self handleServerFailure:operation];
+        }
+    }];
+}
+
+#pragma mark - Helpers
 
 -(id)success:(NSDictionary *)responseObject{
     if (responseObject) {

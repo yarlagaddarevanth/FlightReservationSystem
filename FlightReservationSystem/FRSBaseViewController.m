@@ -25,10 +25,10 @@
         
 
     //Tap Gesture
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+    _tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                             action:@selector(tap:)];
-    tap.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:tap];
+    _tap.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:_tap];
 }
 
 -(void)tap:(UITapGestureRecognizer *)sender{

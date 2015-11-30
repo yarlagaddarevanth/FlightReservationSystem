@@ -9,6 +9,7 @@
 #import "FRSPaymentViewController.h"
 
 @interface FRSPaymentViewController ()
+- (IBAction)continueClicked:(id)sender;
 
 @end
 
@@ -41,4 +42,26 @@
 }
 */
 
+- (IBAction)continueClicked:(id)sender {
+    
+    FRSProgressHUD *HUD = [[FRSProgressHUD alloc] initWithView:self.view showAnimated:YES];
+
+    NSDictionary *parameters =[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil];
+    [[FRSNetworkingManager sharedNetworkingManager] reserveTicketWithParameters:parameters completionBlock:^(id response, NSError *error) {
+        [HUD hide:NO];
+        
+        if (error) {
+            [TSMessage showNotificationWithTitle:@"Failed" subtitle:@"Unable to complete reservation. Try again later." type:TSMessageNotificationTypeError];
+        }
+        else {
+            [TSMessage showNotificationWithTitle:@"Success" subtitle:@"You have succcessfully reserved the ticket" type:TSMessageNotificationTypeSuccess];
+            
+            [self performSelector:@selector(goBackToRoot) withObject:nil afterDelay:1.0];
+        }
+    }];
+}
+
+-(void)goBackToRoot{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end
