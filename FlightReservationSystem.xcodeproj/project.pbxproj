@@ -32,6 +32,10 @@
 		F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C61C05A52B00B91B41 /* FRSChangePasswordViewController.m */; };
 		F24472CA1C05A96400B91B41 /* FRSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472C91C05A96400B91B41 /* FRSHomeViewController.m */; };
 		F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */; };
+		F27B82191C0D7695009CF06A /* FRSViewReservationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B82181C0D7695009CF06A /* FRSViewReservationsResponse.m */; };
+		F27B821C1C0D77FB009CF06A /* FRSViewReservationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B821B1C0D77FB009CF06A /* FRSViewReservationsViewController.m */; };
+		F27B82201C0D79ED009CF06A /* FRSViewReservationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B821E1C0D79ED009CF06A /* FRSViewReservationTableViewCell.m */; };
+		F27B82211C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27B821F1C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib */; };
 		F2BE00B71C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE00B31C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.m */; };
 		F2BE00B81C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE00B51C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.m */; };
 		F2BE00B91C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2BE00B61C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.xib */; };
@@ -117,6 +121,13 @@
 		F24472C91C05A96400B91B41 /* FRSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSHomeViewController.m; sourceTree = "<group>"; };
 		F24472CB1C05C74A00B91B41 /* FRSPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSPaymentViewController.h; sourceTree = "<group>"; };
 		F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSPaymentViewController.m; sourceTree = "<group>"; };
+		F27B82171C0D7695009CF06A /* FRSViewReservationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSViewReservationsResponse.h; sourceTree = "<group>"; };
+		F27B82181C0D7695009CF06A /* FRSViewReservationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSViewReservationsResponse.m; sourceTree = "<group>"; };
+		F27B821A1C0D77FB009CF06A /* FRSViewReservationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSViewReservationsViewController.h; sourceTree = "<group>"; };
+		F27B821B1C0D77FB009CF06A /* FRSViewReservationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSViewReservationsViewController.m; sourceTree = "<group>"; };
+		F27B821D1C0D79ED009CF06A /* FRSViewReservationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSViewReservationTableViewCell.h; sourceTree = "<group>"; };
+		F27B821E1C0D79ED009CF06A /* FRSViewReservationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSViewReservationTableViewCell.m; sourceTree = "<group>"; };
+		F27B821F1C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRSViewReservationTableViewCell.xib; sourceTree = "<group>"; };
 		F2BE00B21C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSingleLineTextFieldCellVM.h; sourceTree = "<group>"; };
 		F2BE00B31C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSingleLineTextFieldCellVM.m; sourceTree = "<group>"; };
 		F2BE00B41C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSingleTextFieldTableViewCell.h; sourceTree = "<group>"; };
@@ -236,6 +247,11 @@
 				F24472BC1C05955400B91B41 /* FRSBaseViewController.m */,
 				F24472C81C05A96400B91B41 /* FRSHomeViewController.h */,
 				F24472C91C05A96400B91B41 /* FRSHomeViewController.m */,
+				F27B821A1C0D77FB009CF06A /* FRSViewReservationsViewController.h */,
+				F27B821B1C0D77FB009CF06A /* FRSViewReservationsViewController.m */,
+				F27B821D1C0D79ED009CF06A /* FRSViewReservationTableViewCell.h */,
+				F27B821E1C0D79ED009CF06A /* FRSViewReservationTableViewCell.m */,
+				F27B821F1C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib */,
 				F24472CB1C05C74A00B91B41 /* FRSPaymentViewController.h */,
 				F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */,
 				B6F5732C1C0677010049594A /* FRSAdminHomeViewController.h */,
@@ -336,6 +352,8 @@
 				F2BE00C51C0AA7B20004EDD4 /* FRSAirportsResponse.m */,
 				F2BE00C71C0AB3B80004EDD4 /* FRSSearchFlightsResponse.h */,
 				F2BE00C81C0AB3B80004EDD4 /* FRSSearchFlightsResponse.m */,
+				F27B82171C0D7695009CF06A /* FRSViewReservationsResponse.h */,
+				F27B82181C0D7695009CF06A /* FRSViewReservationsResponse.m */,
 				F2BE00C11C0AA6090004EDD4 /* FRSAirport.h */,
 				F2BE00C21C0AA6090004EDD4 /* FRSAirport.m */,
 			);
@@ -466,6 +484,7 @@
 				F222FAFC1C0A89D7001F6919 /* FRSFlightInfoTableViewCell.xib in Resources */,
 				F204D1EA1BD60460000C164B /* Assets.xcassets in Resources */,
 				F222FAF41C0A82A9001F6919 /* FRSFlightInfoView.xib in Resources */,
+				F27B82211C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib in Resources */,
 				F204D1E51BD60460000C164B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,11 +571,14 @@
 				F2CB444D1C07BBDD008E6134 /* FRSUser.m in Sources */,
 				F2CB44511C07C636008E6134 /* FRSProgressHUD.m in Sources */,
 				F2BE00C61C0AA7B20004EDD4 /* FRSAirportsResponse.m in Sources */,
+				F27B82201C0D79ED009CF06A /* FRSViewReservationTableViewCell.m in Sources */,
 				B6F5732E1C0677010049594A /* FRSAdminHomeViewController.m in Sources */,
+				F27B821C1C0D77FB009CF06A /* FRSViewReservationsViewController.m in Sources */,
 				F2BE00C91C0AB3B80004EDD4 /* FRSSearchFlightsResponse.m in Sources */,
 				F2CB444C1C07BBDD008E6134 /* FRSLoginResponse.m in Sources */,
 				F24472C71C05A52B00B91B41 /* FRSChangePasswordViewController.m in Sources */,
 				F24472CD1C05C74A00B91B41 /* FRSPaymentViewController.m in Sources */,
+				F27B82191C0D7695009CF06A /* FRSViewReservationsResponse.m in Sources */,
 				F222FAFB1C0A89D7001F6919 /* FRSFlightInfoTableViewCell.m in Sources */,
 				F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */,
 				F222FAF21C0A8281001F6919 /* FRSFlightInfoView.m in Sources */,

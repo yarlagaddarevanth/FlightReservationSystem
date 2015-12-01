@@ -10,10 +10,12 @@
 #import "TRSingleLineTextFieldCellVM.h"
 #import "TRSingleTextFieldTableViewCell.h"
 #import "FRSPaymentViewController.h"
+#import "FRSFlightInfoView.h"
 
 static NSString *TRSingleTextFieldTableViewCell_Identifier = @"TRSingleTextFieldTableViewCell";
 
 @interface FRSReservationStep2Viewcontroller () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet FRSFlightInfoView *flightInfoView;
 @property (weak, nonatomic) IBOutlet UITextField *mobileTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 
@@ -31,6 +33,7 @@ static NSString *TRSingleTextFieldTableViewCell_Identifier = @"TRSingleTextField
     // Do any additional setup after loading the view.
     [_passengersTableView registerNib:[UINib nibWithNibName:NSStringFromClass([TRSingleTextFieldTableViewCell class]) bundle:nil] forCellReuseIdentifier:TRSingleTextFieldTableViewCell_Identifier];
     
+    [_flightInfoView configureViewWithFlight:_reservation.flight];
     [self configureTableCellVMs];
 }
 

@@ -167,6 +167,43 @@
             </objects>
             <point key="canvasLocation" x="1261" y="315"/>
         </scene>
+        <!--View Reservations View Controller-->
+        <scene sceneID="r2c-lo-WU0">
+            <objects>
+                <viewController id="QGR-fy-UW4" customClass="FRSViewReservationsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3H3-Qw-mij"/>
+                        <viewControllerLayoutGuide type="bottom" id="UfI-3H-Cu6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SQj-3C-DWC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Elp-Xi-mzD">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QGR-fy-UW4" id="LMc-5j-hxB"/>
+                                    <outlet property="delegate" destination="QGR-fy-UW4" id="4Bl-Ck-uO1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Elp-Xi-mzD" secondAttribute="trailing" id="g4Q-Cd-pxu"/>
+                            <constraint firstItem="UfI-3H-Cu6" firstAttribute="top" secondItem="Elp-Xi-mzD" secondAttribute="bottom" id="pEj-6G-ewv"/>
+                            <constraint firstItem="Elp-Xi-mzD" firstAttribute="top" secondItem="3H3-Qw-mij" secondAttribute="bottom" id="t5n-JO-b35"/>
+                            <constraint firstItem="Elp-Xi-mzD" firstAttribute="leading" secondItem="SQj-3C-DWC" secondAttribute="leading" id="y2L-1s-DJD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Elp-Xi-mzD" id="nQk-UW-lRC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGx-NM-RMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1999" y="-417"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="IyM-IP-2xq">
             <objects>
@@ -253,18 +290,6 @@
                                     <action selector="selectNumberOfPassengersButtonTapped:" destination="Fa3-SN-Di8" eventType="touchUpInside" id="p1X-fh-nJE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-JG-rsj">
-                                <rect key="frame" x="20" y="350" width="60" height="23"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="OPS-Ke-ssz"/>
-                                    <constraint firstAttribute="width" constant="60" id="t97-Em-VvG"/>
-                                </constraints>
-                                <state key="normal" title="Payment"/>
-                                <connections>
-                                    <segue destination="xva-93-vpH" kind="show" id="nqA-2g-Pqh"/>
-                                </connections>
-                            </button>
                             <datePicker alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-lT-odW">
                                 <rect key="frame" x="0.0" y="450" width="600" height="150"/>
                                 <animations/>
@@ -323,12 +348,15 @@
                                     <action selector="selectDateOfJourneyTapped:" destination="Fa3-SN-Di8" eventType="touchUpInside" id="pJp-7o-PZO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj6-xN-gXc">
-                                <rect key="frame" x="20" y="376" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjI-bQ-UPF">
+                                <rect key="frame" x="20" y="350" width="126" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="8n1-Zj-eEG"/>
+                                    <constraint firstAttribute="height" constant="23" id="o8k-WC-gRo"/>
+                                </constraints>
+                                <state key="normal" title="View Reservations"/>
                                 <connections>
-                                    <segue destination="2Vb-6C-cLd" kind="show" id="Ucv-hX-j4w"/>
+                                    <segue destination="QGR-fy-UW4" kind="show" identifier="SegueShowViewReservations" id="oXD-Td-gi6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -336,7 +364,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rxd-H6-wPU" firstAttribute="top" secondItem="hOV-nz-7Uc" secondAttribute="bottom" constant="8" id="17O-6x-RmL"/>
-                            <constraint firstItem="yj6-xN-gXc" firstAttribute="leading" secondItem="ebs-JG-rsj" secondAttribute="leading" id="1hC-Eb-N8b"/>
                             <constraint firstItem="hOV-nz-7Uc" firstAttribute="top" secondItem="aSK-aE-RII" secondAttribute="bottom" constant="21" id="2Fo-zm-Y30"/>
                             <constraint firstItem="Rj8-vd-yzy" firstAttribute="leading" secondItem="hOV-nz-7Uc" secondAttribute="leading" id="2zI-wf-CRz"/>
                             <constraint firstItem="W5n-JJ-b6E" firstAttribute="top" secondItem="Rxd-H6-wPU" secondAttribute="bottom" constant="15" id="7a5-bI-baI"/>
@@ -345,16 +372,14 @@
                             <constraint firstAttribute="trailing" secondItem="Hmz-4x-bjo" secondAttribute="trailing" id="BkM-89-08K"/>
                             <constraint firstAttribute="trailing" secondItem="LS3-fl-V7H" secondAttribute="trailing" id="Es8-hv-e6Q"/>
                             <constraint firstItem="GNe-fb-fDD" firstAttribute="leading" secondItem="hOV-nz-7Uc" secondAttribute="leading" id="FJr-JQ-lUw"/>
-                            <constraint firstItem="ebs-JG-rsj" firstAttribute="leading" secondItem="hOV-nz-7Uc" secondAttribute="leading" id="FKb-lT-cem"/>
+                            <constraint firstItem="CjI-bQ-UPF" firstAttribute="leading" secondItem="ICh-pI-JbO" secondAttribute="leading" constant="20" id="NUd-uq-fT7"/>
                             <constraint firstItem="Rj8-vd-yzy" firstAttribute="trailing" secondItem="Rxd-H6-wPU" secondAttribute="trailing" id="Rx3-Uc-ahG"/>
                             <constraint firstItem="rRb-9b-IXc" firstAttribute="top" secondItem="GNe-fb-fDD" secondAttribute="bottom" constant="8" id="W69-ND-FZF"/>
-                            <constraint firstItem="ebs-JG-rsj" firstAttribute="top" secondItem="asI-KZ-gZl" secondAttribute="bottom" constant="30" id="WXx-Ha-pig"/>
                             <constraint firstItem="Rj8-vd-yzy" firstAttribute="top" secondItem="W5n-JJ-b6E" secondAttribute="bottom" constant="8" id="Wxj-ww-BeC"/>
                             <constraint firstItem="Hmz-4x-bjo" firstAttribute="leading" secondItem="ICh-pI-JbO" secondAttribute="leading" id="Yde-Xb-5ah"/>
                             <constraint firstItem="5Hc-Mj-uKH" firstAttribute="top" secondItem="asI-KZ-gZl" secondAttribute="bottom" constant="30" id="YzX-nn-uGH"/>
                             <constraint firstItem="asI-KZ-gZl" firstAttribute="top" secondItem="rd2-9v-DrK" secondAttribute="bottom" constant="8" id="b3C-64-8pk"/>
                             <constraint firstAttribute="trailing" secondItem="5Hc-Mj-uKH" secondAttribute="trailing" constant="20" id="dj9-iC-h9D"/>
-                            <constraint firstItem="yj6-xN-gXc" firstAttribute="bottom" secondItem="Hmz-4x-bjo" secondAttribute="top" id="dzC-C4-st9"/>
                             <constraint firstAttribute="trailing" secondItem="zWR-lT-odW" secondAttribute="trailing" id="eFx-V7-lEH"/>
                             <constraint firstItem="57n-CH-f0x" firstAttribute="top" secondItem="LS3-fl-V7H" secondAttribute="bottom" id="ebM-dj-i2Z"/>
                             <constraint firstItem="asI-KZ-gZl" firstAttribute="leading" secondItem="rRb-9b-IXc" secondAttribute="leading" id="g6E-WO-caC"/>
@@ -368,6 +393,7 @@
                             <constraint firstItem="GNe-fb-fDD" firstAttribute="top" secondItem="Rj8-vd-yzy" secondAttribute="bottom" constant="15" id="q3c-tP-QMR"/>
                             <constraint firstItem="asI-KZ-gZl" firstAttribute="trailing" secondItem="rRb-9b-IXc" secondAttribute="trailing" id="q4V-mr-mSM"/>
                             <constraint firstItem="zWR-lT-odW" firstAttribute="leading" secondItem="ICh-pI-JbO" secondAttribute="leading" id="smE-1Y-Ufx"/>
+                            <constraint firstItem="CjI-bQ-UPF" firstAttribute="top" secondItem="5Hc-Mj-uKH" secondAttribute="top" id="tYy-FZ-cKd"/>
                             <constraint firstItem="rd2-9v-DrK" firstAttribute="top" secondItem="rRb-9b-IXc" secondAttribute="bottom" constant="15" id="vRp-ty-pVe"/>
                             <constraint firstItem="rd2-9v-DrK" firstAttribute="leading" secondItem="GNe-fb-fDD" secondAttribute="leading" id="yBo-Hr-QHg"/>
                             <constraint firstItem="zWR-lT-odW" firstAttribute="top" secondItem="Hmz-4x-bjo" secondAttribute="bottom" id="zJR-Zz-uEF"/>
@@ -519,9 +545,6 @@
                             <constraint firstItem="IMh-kB-b05" firstAttribute="leading" secondItem="RhR-Xh-oXT" secondAttribute="leading" id="zxV-8L-9ID"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="continueClicked" destination="ln6-15-WgS" id="4Ac-x5-FOM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sZ-kM-kmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -725,6 +748,7 @@
                     </view>
                     <connections>
                         <outlet property="addressTextField" destination="bT0-1S-oE4" id="LWU-PX-ftc"/>
+                        <outlet property="flightInfoView" destination="3In-aP-M1v" id="GXN-vH-ObF"/>
                         <outlet property="mobileTextField" destination="xvt-jN-D9z" id="lif-cc-3k0"/>
                         <outlet property="passengersTableView" destination="4t4-99-koX" id="A7e-kW-bnx"/>
                         <segue destination="xva-93-vpH" kind="show" identifier="SegueShowPayment" id="mbJ-3Z-ewi"/>
@@ -1179,8 +1203,4 @@
             <point key="canvasLocation" x="245" y="-492"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="uJH-pa-nnM"/>
-        <segue reference="mbJ-3Z-ewi"/>
-    </inferredMetricsTieBreakers>
 </document>

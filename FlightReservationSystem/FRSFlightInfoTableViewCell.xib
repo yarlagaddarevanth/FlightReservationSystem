@@ -29,6 +29,9 @@
                     <constraint firstItem="zZV-On-afh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lTz-2P-Tu7"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="flightInfoView" destination="zZV-On-afh" id="Nav-B1-reC"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

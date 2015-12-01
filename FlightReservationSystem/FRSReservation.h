@@ -10,11 +10,19 @@
 #import "FRSFlight.h"
 #import "FRSAirport.h"
 
+@protocol FRSReservation
+@end
+
 @interface FRSReservation : FRSBaseModel
 
 @property (nonatomic) FRSFlight *flight;
 @property (nonatomic) FRSAirport *fromAirport;
 @property (nonatomic) FRSAirport *toAirport;
+@property (nonatomic) NSString *reservationId;
+@property (nonatomic) NSString *flightCode;
+@property (nonatomic) NSString *flightId;
+@property (nonatomic) NSString *userId;
+
 @property (nonatomic) NSInteger noOfPassengers;
 @property (nonatomic) NSString *passengers;
 @property (nonatomic) NSString *address;

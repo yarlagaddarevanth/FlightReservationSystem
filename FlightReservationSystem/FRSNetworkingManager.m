@@ -12,6 +12,7 @@
 #import "FRSLoginResponse.h"
 #import "FRSAirportsResponse.h"
 #import "FRSSearchFlightsResponse.h"
+#import "FRSViewReservationsResponse.h"
 #import "FRSFlight.h"
 
 #import <TSMessages/TSMessage.h>
@@ -19,7 +20,7 @@
 @class AppDelegate;
 
 //functions/URLs
-#define FRS_API_BASE_HOST @"http://dec07317.ngrok.io/flight/rs"
+#define FRS_API_BASE_HOST @"http://79dd47db.ngrok.io/flight/rs"
 #define FRS_API_USER_APP @"user"
 
 #define FRS_API_USER FRS_API_BASE_HOST "/" FRS_API_USER_APP
@@ -31,6 +32,7 @@
 #define USER_GET_AIRPORTS_URL FRS_API_USER "/getAirports"
 #define USER_SEARCH_FLIGHTS_URL FRS_API_USER "/find"
 #define USER_RESERVE_FLIGHT_URL FRS_API_USER "/reserve"
+#define USER_GET_RESERVATIONS_URL FRS_API_USER "/getReservations"
 
 
 typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
@@ -252,7 +254,6 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
             FRSSearchFlightsResponse *searchFlightsResponse = [[FRSSearchFlightsResponse alloc] initWithDictionary:response.data error:nil];
             parsingCompletion(searchFlightsResponse, nil);
             return ;
-            return ;
         }
         else [self handleAPIFailure:response];
         
@@ -273,6 +274,7 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
 
 -(void)reserveTicketWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
     [manager POST:USER_RESERVE_FLIGHT_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
@@ -293,6 +295,34 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
             [self handleServerFailure:operation];
         }
     }];
+}
+
+#pragma mark Get Reservations
+-(void)getReservationsWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager.requestSerializer setValue:JSESSIONID forHTTPHeaderField:JSESSIONID_KEY];
+    
+    [manager GET:USER_GET_RESERVATIONS_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        FRSResponseModel *response = [self success:responseObject];
+        if (response.success) {
+            FRSViewReservationsResponse *reservationResponse = [[FRSViewReservationsResponse alloc] initWithDictionary:[NSDictionary dictionaryWithObject:response.data forKey:@"reservations"] error:nil];
+            parsingCompletion(reservationResponse, nil);
+            return ;
+        }
+        else [self handleAPIFailure:response];
+        
+        //coFRSon for API success or failure. SO check API falure in the call back also
+        parsingCompletion(response, nil);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        parsingCompletion(nil, error);
+        if (operation.responseString) {
+            [self handleServerFailure:operation];
+        }
+    }];
+    
 }
 
 #pragma mark - Helpers

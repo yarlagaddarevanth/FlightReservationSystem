@@ -71,6 +71,7 @@ typedef enum : NSUInteger {
     //get airports
     [self getAirports];
     
+    
 }
 -(void)getAirports{
     

@@ -51,7 +51,7 @@
 }
 
 -(void)configureViewWithFlight:(FRSFlight *)flight{
-    _flightNameLabel.text = [NSString stringWithFormat:@"Name: %@",flight.flightCode];
+    _flightNameLabel.text = [NSString stringWithFormat:@"Name: %@",flight.flightId];
     _dateLabel.text = [NSString stringWithFormat:@"Date: %@",flight.departureTime];
     _timeLabel.text = [NSString stringWithFormat:@"Time: %@",flight.departureTime];
     _fromLabel.text = flight.source;

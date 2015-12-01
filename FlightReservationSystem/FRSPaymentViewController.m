@@ -46,7 +46,23 @@
     
     FRSProgressHUD *HUD = [[FRSProgressHUD alloc] initWithView:self.view showAnimated:YES];
 
-    NSDictionary *parameters =[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil];
+    /*
+     "flightId": 27,
+     "flightCode": "UCM1436",
+     "noOfPassengers": 3,
+     "passengers": "seenu,siva,revanth,dinesh",
+     "address": "oak street",
+     "mobileNumber": "+181623456789"
+
+     */
+    NSDictionary *parameters =[NSDictionary dictionaryWithObjectsAndKeys:
+                               _reservation.flight.id,@"flightId",
+                               _reservation.flight.flightId,@"flightCode",
+                               [NSString stringWithFormat:@"%ld",_reservation.noOfPassengers],@"noOfPassengers",
+                               _reservation.passengers,@"passengers",
+                               _reservation.address,@"address",
+                               _reservation.mobileNumber,@"mobileNumber",
+                               nil];
     [[FRSNetworkingManager sharedNetworkingManager] reserveTicketWithParameters:parameters completionBlock:^(id response, NSError *error) {
         [HUD hide:NO];
         
