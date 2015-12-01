@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *fromLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *toLabel;
+@property (weak, nonatomic) IBOutlet UILabel *noofseats;
+@property (weak, nonatomic) IBOutlet UILabel *noofseatsavailable;
+@property (weak, nonatomic) IBOutlet UILabel *airportcode;
+@property (weak, nonatomic) IBOutlet UILabel *destinationcode;
 
 @end
 
@@ -54,6 +58,13 @@
     _flightNameLabel.text = [NSString stringWithFormat:@"Name: %@",flight.flightId];
     _dateLabel.text = [NSString stringWithFormat:@"Date: %@",flight.departureTime];
     _timeLabel.text = [NSString stringWithFormat:@"Time: %@",flight.departureTime];
+    _fromLabel.text = [NSString stringWithFormat:@"From: %@",flight.departure];
+    _toLabel.text = [NSString stringWithFormat:@"To: %@",flight.source];
+    _noofseats.text = [NSString stringWithFormat:@"No of seats: %@",flight.noOfSeats];
+    _noofseatsavailable.text = [NSString stringWithFormat:@"No of seats available: %@",flight.noOfSeatsAvailable];
+    _airportcode.text = [NSString stringWithFormat:@"Airport code: %@",flight.sourceCode];
+    _destinationcode.text = [NSString stringWithFormat:@"Destination code: %@",flight.destinationCode];
+    
     _fromLabel.text = flight.source;
     _toLabel.text = flight.destination;
 }
