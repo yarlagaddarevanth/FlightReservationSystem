@@ -9,12 +9,14 @@
 #import "FRSViewReservationsViewController.h"
 #import "FRSViewReservationsResponse.h"
 #import "FRSViewReservationTableViewCell.h"
+#import "FRSReservationDetailViewController.h"
 
 static NSString *FRSViewReservationTableViewCell_Identifier = @"FRSViewReservationTableViewCell";
 
 @interface FRSViewReservationsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) FRSReservation *reservationSelected;
 @property (nonatomic) NSArray *reservations;
 @end
 
@@ -28,6 +30,8 @@ static NSString *FRSViewReservationTableViewCell_Identifier = @"FRSViewReservati
 
     //get reservations
     [self getReservations];
+
+    [self.tap setCancelsTouchesInView:NO];
 
 }
 
@@ -61,33 +65,32 @@ static NSString *FRSViewReservationTableViewCell_Identifier = @"FRSViewReservati
     UITableViewCell *cell;
     FRSViewReservationTableViewCell *reservationsCell = [tableView dequeueReusableCellWithIdentifier:FRSViewReservationTableViewCell_Identifier forIndexPath:indexPath];
     
-    FRSReservation *res = _reservations[indexPath.row];
-    [reservationsCell configureCellWithReservation:res];
+    FRSReservation *reservation = _reservations[indexPath.row];
+    
+    [reservationsCell configureCellWithReservation:reservation];
     cell = reservationsCell;
     return cell;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"reservation selected...");
+    FRSReservation *reservation = _reservations[indexPath.row];
+    _reservationSelected = reservation;
+    
+    [self performSegueWithIdentifier:SegueShowViewReservations sender:self];
+    //Show Reservation Detail.
 }
 
 #pragma mark Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
-    if ([[segue identifier] isEqualToString:SegueShowPayment])
+    if ([[segue identifier] isEqualToString:SegueShowViewReservations])
     {
         // Get reference to the destination view controller
-//        FRSPaymentViewController *vc = [segue destinationViewController];
-//        
-//        NSString *passengersStr = [self getPassengersString];
-//        NSLog(@"passengersStr: %@",passengersStr);
-//        
-//        _reservation.passengers = passengersStr;
-//        _reservation.mobileNumber = _mobileTextField.text;
-//        _reservation.address = _addressTextField.text;
-//        
-//        
-//        vc.reservation = _reservation;
+        FRSReservationDetailViewController *vc = [segue destinationViewController];
+        
+        vc.reservation = _reservationSelected;
         
         // Pass any objects to the view controller here, like...
         //        [vc setMyObjectHere:object];

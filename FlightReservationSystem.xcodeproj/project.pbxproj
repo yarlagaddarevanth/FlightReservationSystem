@@ -36,6 +36,7 @@
 		F27B821C1C0D77FB009CF06A /* FRSViewReservationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B821B1C0D77FB009CF06A /* FRSViewReservationsViewController.m */; };
 		F27B82201C0D79ED009CF06A /* FRSViewReservationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B821E1C0D79ED009CF06A /* FRSViewReservationTableViewCell.m */; };
 		F27B82211C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27B821F1C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib */; };
+		F27B82241C0D8452009CF06A /* FRSReservationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B82231C0D8452009CF06A /* FRSReservationDetailViewController.m */; };
 		F2BE00B71C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE00B31C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.m */; };
 		F2BE00B81C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE00B51C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.m */; };
 		F2BE00B91C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2BE00B61C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.xib */; };
@@ -128,6 +129,8 @@
 		F27B821D1C0D79ED009CF06A /* FRSViewReservationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSViewReservationTableViewCell.h; sourceTree = "<group>"; };
 		F27B821E1C0D79ED009CF06A /* FRSViewReservationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSViewReservationTableViewCell.m; sourceTree = "<group>"; };
 		F27B821F1C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRSViewReservationTableViewCell.xib; sourceTree = "<group>"; };
+		F27B82221C0D8452009CF06A /* FRSReservationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSReservationDetailViewController.h; sourceTree = "<group>"; };
+		F27B82231C0D8452009CF06A /* FRSReservationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSReservationDetailViewController.m; sourceTree = "<group>"; };
 		F2BE00B21C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSingleLineTextFieldCellVM.h; sourceTree = "<group>"; };
 		F2BE00B31C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSingleLineTextFieldCellVM.m; sourceTree = "<group>"; };
 		F2BE00B41C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSingleTextFieldTableViewCell.h; sourceTree = "<group>"; };
@@ -247,11 +250,7 @@
 				F24472BC1C05955400B91B41 /* FRSBaseViewController.m */,
 				F24472C81C05A96400B91B41 /* FRSHomeViewController.h */,
 				F24472C91C05A96400B91B41 /* FRSHomeViewController.m */,
-				F27B821A1C0D77FB009CF06A /* FRSViewReservationsViewController.h */,
-				F27B821B1C0D77FB009CF06A /* FRSViewReservationsViewController.m */,
-				F27B821D1C0D79ED009CF06A /* FRSViewReservationTableViewCell.h */,
-				F27B821E1C0D79ED009CF06A /* FRSViewReservationTableViewCell.m */,
-				F27B821F1C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib */,
+				F27B82251C0D85B9009CF06A /* Reservation */,
 				F24472CB1C05C74A00B91B41 /* FRSPaymentViewController.h */,
 				F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */,
 				B6F5732C1C0677010049594A /* FRSAdminHomeViewController.h */,
@@ -319,6 +318,20 @@
 				F24472C61C05A52B00B91B41 /* FRSChangePasswordViewController.m */,
 			);
 			name = "Login - Signup";
+			sourceTree = "<group>";
+		};
+		F27B82251C0D85B9009CF06A /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				F27B821A1C0D77FB009CF06A /* FRSViewReservationsViewController.h */,
+				F27B821B1C0D77FB009CF06A /* FRSViewReservationsViewController.m */,
+				F27B821D1C0D79ED009CF06A /* FRSViewReservationTableViewCell.h */,
+				F27B821E1C0D79ED009CF06A /* FRSViewReservationTableViewCell.m */,
+				F27B821F1C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib */,
+				F27B82221C0D8452009CF06A /* FRSReservationDetailViewController.h */,
+				F27B82231C0D8452009CF06A /* FRSReservationDetailViewController.m */,
+			);
+			name = Reservation;
 			sourceTree = "<group>";
 		};
 		F2BE00BA1C0A93350004EDD4 /* Add Passengers */ = {
@@ -582,6 +595,7 @@
 				F222FAFB1C0A89D7001F6919 /* FRSFlightInfoTableViewCell.m in Sources */,
 				F24472C01C05957700B91B41 /* FRSSignUpViewController.m in Sources */,
 				F222FAF21C0A8281001F6919 /* FRSFlightInfoView.m in Sources */,
+				F27B82241C0D8452009CF06A /* FRSReservationDetailViewController.m in Sources */,
 				F204D1DC1BD60460000C164B /* main.m in Sources */,
 				F2CB443C1C07B2E6008E6134 /* FRSBaseModel.m in Sources */,
 				B6019EAF1C0A7FAE006BBE92 /* FRSReservationStep2Viewcontroller.m in Sources */,
