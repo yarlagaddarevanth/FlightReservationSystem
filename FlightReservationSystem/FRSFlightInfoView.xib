@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FRSFlightInfoView"/>
@@ -13,6 +14,7 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: UCM 1231" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPN-cR-emQ">
                     <rect key="frame" x="10" y="15" width="300" height="21"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="vtN-5r-Tm8"/>
                     </constraints>
@@ -20,15 +22,62 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date: nov 28 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uu6-dZ-peW">
+                    <rect key="frame" x="10" y="39" width="140" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 10:10AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cb-MP-vr5">
+                    <rect key="frame" x="158" y="39" width="113" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From: New York" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2D-zZ-dzB">
+                    <rect key="frame" x="10" y="63" width="121" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To: Los Angeles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiW-lh-6XD">
+                    <rect key="frame" x="158" y="63" width="121" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="8Cb-MP-vr5" firstAttribute="leading" secondItem="Uu6-dZ-peW" secondAttribute="trailing" constant="8" id="4h5-X3-gq3"/>
+                <constraint firstItem="IiW-lh-6XD" firstAttribute="leading" secondItem="f2D-zZ-dzB" secondAttribute="trailing" constant="27" id="4h7-3w-OHW"/>
                 <constraint firstAttribute="trailing" secondItem="XPN-cR-emQ" secondAttribute="trailing" constant="10" id="9iQ-cr-ICz"/>
+                <constraint firstItem="Uu6-dZ-peW" firstAttribute="top" secondItem="XPN-cR-emQ" secondAttribute="bottom" constant="3" id="C5m-pB-BSL"/>
+                <constraint firstItem="Uu6-dZ-peW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="JLR-uQ-7Ql"/>
+                <constraint firstItem="IiW-lh-6XD" firstAttribute="top" secondItem="8Cb-MP-vr5" secondAttribute="bottom" constant="3" id="LAa-iS-W72"/>
                 <constraint firstItem="XPN-cR-emQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="LNw-Hs-R81"/>
                 <constraint firstItem="XPN-cR-emQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="OBV-7q-Szd"/>
+                <constraint firstItem="IiW-lh-6XD" firstAttribute="firstBaseline" secondItem="f2D-zZ-dzB" secondAttribute="firstBaseline" id="Pae-f5-dW7"/>
+                <constraint firstAttribute="bottom" secondItem="IiW-lh-6XD" secondAttribute="bottom" constant="16" id="REl-jH-Geb"/>
+                <constraint firstItem="IiW-lh-6XD" firstAttribute="top" secondItem="8Cb-MP-vr5" secondAttribute="bottom" constant="3" id="SCx-Eg-Qtb"/>
+                <constraint firstItem="8Cb-MP-vr5" firstAttribute="leading" secondItem="Uu6-dZ-peW" secondAttribute="trailing" constant="8" id="Uv2-e1-Y8B"/>
+                <constraint firstItem="Uu6-dZ-peW" firstAttribute="top" secondItem="XPN-cR-emQ" secondAttribute="bottom" constant="3" id="XF2-rD-X2y"/>
+                <constraint firstItem="Uu6-dZ-peW" firstAttribute="leading" secondItem="XPN-cR-emQ" secondAttribute="leading" id="aZo-nC-dhT"/>
+                <constraint firstItem="f2D-zZ-dzB" firstAttribute="leading" secondItem="Uu6-dZ-peW" secondAttribute="leading" id="eAI-Gw-Jss"/>
+                <constraint firstItem="8Cb-MP-vr5" firstAttribute="top" secondItem="XPN-cR-emQ" secondAttribute="bottom" constant="3" id="eXn-QN-ot4"/>
+                <constraint firstItem="f2D-zZ-dzB" firstAttribute="top" secondItem="Uu6-dZ-peW" secondAttribute="bottom" constant="3" id="gqw-by-vzl"/>
+                <constraint firstAttribute="trailing" secondItem="8Cb-MP-vr5" secondAttribute="trailing" constant="49" id="kF7-AZ-fAG"/>
+                <constraint firstItem="IiW-lh-6XD" firstAttribute="baseline" secondItem="f2D-zZ-dzB" secondAttribute="baseline" id="kkj-9t-Aya"/>
+                <constraint firstItem="IiW-lh-6XD" firstAttribute="leading" secondItem="8Cb-MP-vr5" secondAttribute="leading" id="qFc-kH-bbl"/>
+                <constraint firstAttribute="trailing" secondItem="IiW-lh-6XD" secondAttribute="trailing" constant="41" id="vnr-uI-hdf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="162" y="113"/>
+            <point key="canvasLocation" x="134" y="114"/>
         </view>
     </objects>
 </document>
