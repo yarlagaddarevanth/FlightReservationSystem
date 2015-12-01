@@ -8,6 +8,8 @@
 
 #import "FRSViewReservationTableViewCell.h"
 @interface FRSViewReservationTableViewCell ()
+@property (weak, nonatomic) IBOutlet UILabel *reservationID;
+@property (weak, nonatomic) IBOutlet UILabel *passengers;
 
 @end
 
@@ -18,7 +20,8 @@
 }
 
 -(void)configureCellWithReservation:(FRSReservation *)reservation{
-    self.textLabel.text = [NSString stringWithFormat:@"Res: %@",reservation.reservationId];
+    _reservationID.text = [NSString stringWithFormat:@"reservation: %@",reservation.reservationId];
+    _passengers.text = [NSString stringWithFormat:@"Passengers: %@",reservation.passengers];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
