@@ -10,4 +10,6 @@
 
 @interface FRSPaymentViewController : FRSBaseViewController
 
+@property (nonatomic) FRSReservation *reservation;
+
 @end

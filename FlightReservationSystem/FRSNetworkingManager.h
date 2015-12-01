@@ -33,4 +33,12 @@ typedef void (^FRSParsingCompletionBlock)(id response, NSError *error);
 //Get User Details
 -(void)getUserDetailsWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
 
+#pragma mark Airports
+-(void)getAirportsWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+
+#pragma mark - Reserve
+-(void)reserveTicketWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+
+#pragma mark - Search Flights
+-(void)searchFlightsWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion;
 @end

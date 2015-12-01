@@ -10,4 +10,6 @@
 
 @interface FRSReservationStep2Viewcontroller : FRSBaseViewController
 
+@property (nonatomic) FRSReservation *reservation;
+
 @end

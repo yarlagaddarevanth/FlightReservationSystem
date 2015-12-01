@@ -387,6 +387,7 @@
                         <outlet property="selectNumberofPassengersButton" destination="asI-KZ-gZl" id="0mC-8T-Fab"/>
                         <outlet property="selectToDestinationButton" destination="Rj8-vd-yzy" id="Kbl-5T-iYo"/>
                         <outlet property="toolBar" destination="Hmz-4x-bjo" id="W7N-Nr-ohC"/>
+                        <segue destination="UGW-Iu-eV8" kind="show" identifier="SeguePushAvailableFlightsList" id="X5i-R6-M63"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hh6-LG-nR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -486,7 +487,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="90C-9H-R36" kind="show" id="LdA-A7-zAO"/>
+                                    <action selector="continueClicked:" destination="xva-93-vpH" eventType="touchUpInside" id="aA7-B7-b8G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -518,10 +519,51 @@
                             <constraint firstItem="IMh-kB-b05" firstAttribute="leading" secondItem="RhR-Xh-oXT" secondAttribute="leading" id="zxV-8L-9ID"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueClicked" destination="ln6-15-WgS" id="4Ac-x5-FOM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sZ-kM-kmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2703" y="315"/>
+        </scene>
+        <!--Available Flights List View Controller-->
+        <scene sceneID="f41-uL-Mhx">
+            <objects>
+                <viewController id="UGW-Iu-eV8" customClass="FRSAvailableFlightsListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cSy-Mp-w8Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="yVF-uH-ZWJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F7p-Am-uAc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Djj-Cy-0J8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UGW-Iu-eV8" id="ev9-ZP-UTv"/>
+                                    <outlet property="delegate" destination="UGW-Iu-eV8" id="k7R-ba-TPM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Djj-Cy-0J8" firstAttribute="top" secondItem="cSy-Mp-w8Z" secondAttribute="bottom" id="Mbn-r1-k7K"/>
+                            <constraint firstItem="yVF-uH-ZWJ" firstAttribute="top" secondItem="Djj-Cy-0J8" secondAttribute="bottom" id="R9u-DH-ABK"/>
+                            <constraint firstItem="Djj-Cy-0J8" firstAttribute="leading" secondItem="F7p-Am-uAc" secondAttribute="leading" id="qZf-86-Qfi"/>
+                            <constraint firstAttribute="trailing" secondItem="Djj-Cy-0J8" secondAttribute="trailing" id="yxc-M1-PLm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Djj-Cy-0J8" id="Uo6-0T-9Lh"/>
+                        <segue destination="2Vb-6C-cLd" kind="show" identifier="SegueShowReservationStep2" id="uJH-pa-nnM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pH9-bt-VSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2003" y="1943"/>
         </scene>
         <!--Manage Flight View Controller-->
         <scene sceneID="8I3-Zr-IO1">
@@ -599,7 +641,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="jhO-Gy-o61"/>
+                                    <constraint firstAttribute="height" constant="100" id="qlP-N6-bRd"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-dl-geF" customClass="FRSFlightInfoView">
@@ -659,6 +701,12 @@
                             <constraint firstAttribute="trailing" secondItem="3In-aP-M1v" secondAttribute="trailing" id="zCn-e8-7Yv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="bT0-1S-oE4" id="LWU-PX-ftc"/>
+                        <outlet property="mobileTextField" destination="xvt-jN-D9z" id="lif-cc-3k0"/>
+                        <outlet property="passengersTableView" destination="4t4-99-koX" id="A7e-kW-bnx"/>
+                        <segue destination="xva-93-vpH" kind="show" identifier="SegueShowPayment" id="mbJ-3Z-ewi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obk-9c-FHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1109,4 +1157,8 @@
             <point key="canvasLocation" x="245" y="-492"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uJH-pa-nnM"/>
+        <segue reference="mbJ-3Z-ewi"/>
+    </inferredMetricsTieBreakers>
 </document>

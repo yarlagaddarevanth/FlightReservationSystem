@@ -7,6 +7,8 @@
 //
 
 #import "FRSHomeViewController.h"
+#import "FRSSearchFlightsResponse.h"
+#import "FRSAvailableFlightsListViewController.h"
 
 #define Default_Button_State_Text @"- select -"
 #define Default_Incomplete_Details_Text @"Incomplete Details!"
@@ -28,9 +30,16 @@ typedef enum : NSUInteger {
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
-@property (nonatomic) NSArray *fromDestinationsArray;
-@property (nonatomic) NSArray *toDestinationsArray;
+@property (nonatomic) NSMutableArray *fromDestinationsArray;
+@property (nonatomic) NSMutableArray *toDestinationsArray;
 @property (nonatomic) NSArray *numberOfPassengersArray;
+
+@property (nonatomic) FRSAirport *fromAirportSelected;
+@property (nonatomic) FRSAirport *toAirportSelected;
+@property (nonatomic) NSDate *dateOfJourneySelected;
+@property (nonatomic) NSInteger numberOfPassengersSelected;
+
+@property (nonatomic) NSArray *flightResultsArray;
 
 @property (assign, nonatomic) FRSPickerMode pickerMode;
 
@@ -55,8 +64,35 @@ typedef enum : NSUInteger {
     //Minumum Date
     [_datePicker setMinimumDate:[NSDate date]];
     [self configureDropDownButtons];
+    
+    _fromDestinationsArray = [[NSMutableArray alloc] initWithCapacity:0];
+    _toDestinationsArray = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    //get airports
+    [self getAirports];
+    
 }
-
+-(void)getAirports{
+    
+    FRSProgressHUD *HUD = [[FRSProgressHUD alloc] initWithView:self.view showAnimated:YES];
+    
+    [[FRSNetworkingManager sharedNetworkingManager] getAirportsWithCompletionBlock:^(id response, NSError *error) {
+        
+        [HUD hide:NO];
+        
+        if (!error) {
+            FRSAirportsResponse *airportsResponse = (FRSAirportsResponse *)response;
+            [_fromDestinationsArray removeAllObjects];
+            [_fromDestinationsArray addObjectsFromArray:airportsResponse.airports];
+            
+            [_toDestinationsArray removeAllObjects];
+            [_toDestinationsArray addObjectsFromArray:airportsResponse.airports];
+            
+        }
+        
+        [_pickerView reloadAllComponents];
+    }];
+}
 -(void)configureDropDownButtons{
     //From
     [_selectFromDestButton setTitle:Default_Button_State_Text forState:UIControlStateNormal];
@@ -64,7 +100,7 @@ typedef enum : NSUInteger {
     _selectFromDestButton.layer.borderColor = [UIColor grayColor].CGColor;
     _selectFromDestButton.layer.cornerRadius = 5.0;
     
-    _fromDestinationsArray = [[NSArray alloc] initWithObjects:@"Chicago", @"Kansas City", @"New York", @"Los Angeles", @"Boston", @"Washington", @"San Fransico", @"Houston", @"Texas", @"Philadelphia", nil];
+//    _fromDestinationsArray = [[NSArray alloc] initWithObjects:@"Chicago", @"Kansas City", @"New York", @"Los Angeles", @"Boston", @"Washington", @"San Fransico", @"Houston", @"Texas", @"Philadelphia", nil];
     
     //To
     [_selectToDestinationButton setTitle:Default_Button_State_Text forState:UIControlStateNormal];
@@ -72,7 +108,7 @@ typedef enum : NSUInteger {
     _selectToDestinationButton.layer.borderColor = [UIColor grayColor].CGColor;
     _selectToDestinationButton.layer.cornerRadius = 5.0;
     
-    _toDestinationsArray = [[NSArray alloc] initWithArray:_fromDestinationsArray];
+//    _toDestinationsArray = [[NSArray alloc] initWithArray:_fromDestinationsArray];
 
     //Date
     [_selectDateButton setTitle:Default_Button_State_Text forState:UIControlStateNormal];
@@ -111,13 +147,16 @@ typedef enum : NSUInteger {
 #pragma mark - Date Picker
 
 - (IBAction)datePickerValueChanged:(id)sender {
+    _dateOfJourneySelected = _datePicker.date;
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
     [dateFormatter setDateFormat:@"MM-dd-yyyy"];
     
-    NSString *formatedDate = [dateFormatter stringFromDate:_datePicker.date];
+    NSString *formatedDate = [dateFormatter stringFromDate:_dateOfJourneySelected];
     
     [_selectDateButton setTitle:formatedDate forState:UIControlStateNormal];
+    
 }
 
 #pragma mark - Picker View
@@ -142,16 +181,41 @@ typedef enum : NSUInteger {
     NSString *title = @"";
     
     NSArray *sourceArray = [self getDataSourceArrayForCurrentPickerMode];
-    title = sourceArray[row];
+    
+    if (_pickerMode == FRSPickerModeNumberOfPassengers) {
+        title = sourceArray[row];
+    }
+    else{
+        FRSAirport *airport = (FRSAirport *)sourceArray[row];
+        title = airport.airportName;
+    }
     
     return title;
 
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSString *title = @"";
+
     NSArray *sourceArray = [self getDataSourceArrayForCurrentPickerMode];
     UIButton *button = [self getButtonForCurrentPickerMode];
     
-    [button setTitle:sourceArray[row] forState:UIControlStateNormal];
+    
+    if (_pickerMode == FRSPickerModeNumberOfPassengers) {
+        title = sourceArray[row];
+        _numberOfPassengersSelected = title.integerValue;
+    }
+    else{
+        FRSAirport *airport = (FRSAirport *)sourceArray[row];
+        title = airport.airportName;
+        if(_pickerMode == FRSPickerModeFromDestinations)
+            _fromAirportSelected = airport;
+        else _toAirportSelected = airport;
+            
+    }
+
+
+    [button setTitle:title forState:UIControlStateNormal];
+    
 }
 
 -(void)reloadPickerViewForCurrentMode{
@@ -277,30 +341,90 @@ typedef enum : NSUInteger {
     [self reloadPickerViewForCurrentMode];
 }
 - (IBAction)searchFlightsClicked:(id)sender {
+    
+//    if ([self searchFlightsFormValidation]) {
+        [self getSearchResults];
+//    }
+    
+}
+
+-(BOOL)searchFlightsFormValidation{
+    BOOL isValid = YES;
+    
     if ([[_selectFromDestButton titleForState:UIControlStateNormal] isEqualToString:Default_Button_State_Text]) {
         [TSMessage showNotificationWithTitle:Default_Incomplete_Details_Text
                                     subtitle:@"Please select 'FROM' Destination!"
                                         type:TSMessageNotificationTypeWarning];
-        return;
+        isValid = NO;
     }
-    if ([[_selectToDestinationButton titleForState:UIControlStateNormal] isEqualToString:Default_Button_State_Text]) {
+    else if ([[_selectToDestinationButton titleForState:UIControlStateNormal] isEqualToString:Default_Button_State_Text]) {
         [TSMessage showNotificationWithTitle:Default_Incomplete_Details_Text
                                     subtitle:@"Please select 'TO' Destination!"
                                         type:TSMessageNotificationTypeWarning];
-        return;
+        isValid = NO;
     }
-    if ([[_selectDateButton titleForState:UIControlStateNormal] isEqualToString:Default_Button_State_Text]) {
+    else if ([[_selectDateButton titleForState:UIControlStateNormal] isEqualToString:Default_Button_State_Text]) {
         [TSMessage showNotificationWithTitle:Default_Incomplete_Details_Text
                                     subtitle:@"Please select 'Date of Journey'!"
                                         type:TSMessageNotificationTypeWarning];
-        return;
+        isValid = NO;
     }
-    if ([[_selectNumberofPassengersButton titleForState:UIControlStateNormal] isEqualToString:Default_Button_State_Text]) {
+    else if ([[_selectNumberofPassengersButton titleForState:UIControlStateNormal] isEqualToString:Default_Button_State_Text]) {
         [TSMessage showNotificationWithTitle:Default_Incomplete_Details_Text
                                     subtitle:@"Please select 'Number of Passengers'!"
                                         type:TSMessageNotificationTypeWarning];
-        return;
+        isValid = NO;
+    }
+    else {
+    
+    }
+
+    return isValid;
+}
+
+#pragma mark - Search Flights API
+-(void)getSearchResults{
+    FRSProgressHUD *HUD = [[FRSProgressHUD alloc] initWithView:self.view showAnimated:YES];
+    
+    NSDictionary *parameters = nil;
+    [[FRSNetworkingManager sharedNetworkingManager] searchFlightsWithParameters:parameters completionBlock:^(id response, NSError *error) {
+        
+        [HUD hide:NO];
+        
+        if (!error) {
+            FRSSearchFlightsResponse *flightResultResponse = (FRSSearchFlightsResponse *)response;
+            _flightResultsArray = flightResultResponse.flights;
+
+            [self performSegueWithIdentifier:SeguePushAvailableFlightsList sender:self];
+        }
+        
+        [_pickerView reloadAllComponents];
+    }];
+
+}
+
+#pragma mark Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:SegueShowPayment])
+    {
+        // Get reference to the destination view controller
+        FRSAvailableFlightsListViewController *vc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        FRSReservation *reservation = [FRSReservation new];
+        reservation.fromAirport = _fromAirportSelected;
+        reservation.toAirport = _toAirportSelected;
+        reservation.dateOfJourney = _dateOfJourneySelected;
+        reservation.noOfPassengers = _numberOfPassengersSelected;
+        
+        vc.reservation = reservation;
+        
+        vc.flightsArray = _flightResultsArray;
     }
 }
+
+
 
 @end
