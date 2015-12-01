@@ -6,10 +6,9 @@
 //  Copyright © 2015 Revanth Kumar. All rights reserved.
 //
 
-#import "FRSBaseModel.h"
 #import "FRSAirport.h"
 #import "FRSResponseModel.h"
-@interface FRSAirportsResponse : FRSBaseModel
+@interface FRSAirportsResponse : FRSResponseModel
 
 @property (nonatomic) NSArray<FRSAirport> *airports;
 

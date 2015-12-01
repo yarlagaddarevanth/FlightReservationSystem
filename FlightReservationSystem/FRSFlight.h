@@ -14,6 +14,7 @@
 
 @interface FRSFlight : FRSBaseModel
 
+@property (nonatomic) NSString *id;
 @property (nonatomic) NSString *flightDbId;
 @property (nonatomic) NSString *flightId;
 @property (nonatomic) NSString *destinationCode;

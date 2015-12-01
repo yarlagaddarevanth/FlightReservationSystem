@@ -7,7 +7,12 @@
 //
 
 #import "FRSFlightInfoTableViewCell.h"
+#import "FRSFlightInfoView.h"
 
+@interface FRSFlightInfoTableViewCell ()
+@property (weak, nonatomic) IBOutlet FRSFlightInfoView *flightInfoView;
+
+@end
 @implementation FRSFlightInfoTableViewCell
 
 - (void)awakeFromNib {
@@ -15,7 +20,7 @@
 }
 
 -(void)configureCellWithFlight:(FRSFlight *)flight{
-    
+    [_flightInfoView configureViewWithFlight:flight];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

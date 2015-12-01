@@ -39,7 +39,7 @@ static NSString *FRSFlightInfoTableViewCell_Identifier = @"FRSFlightInfoTableVie
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 15;
+    return _reservation.noOfPassengers;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -50,6 +50,9 @@ static NSString *FRSFlightInfoTableViewCell_Identifier = @"FRSFlightInfoTableVie
     UITableViewCell *cell;
     FRSFlightInfoTableViewCell *infoCell = [tableView dequeueReusableCellWithIdentifier:FRSFlightInfoTableViewCell_Identifier forIndexPath:indexPath];
     
+    FRSFlight *flight = [_flightsArray objectAtIndex:indexPath.row];
+
+    [infoCell configureCellWithFlight:flight];
     
 //    [singleLineCell configureCellWithVM:cellVM];
     cell = infoCell;
@@ -69,15 +72,14 @@ static NSString *FRSFlightInfoTableViewCell_Identifier = @"FRSFlightInfoTableVie
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
-    if ([[segue identifier] isEqualToString:SegueShowPayment])
+    if ([[segue identifier] isEqualToString:SegueShowReservationStep2])
     {
         // Get reference to the destination view controller
         FRSReservationStep2Viewcontroller *vc = [segue destinationViewController];
         
         // Pass any objects to the view controller here, like...
-        FRSReservation *reservation = [FRSReservation new];
-        reservation.flight = _flightSelected;
-        vc.reservation = reservation;
+        _reservation.flight = _flightSelected;
+        vc.reservation = _reservation;
         
     }
 }
