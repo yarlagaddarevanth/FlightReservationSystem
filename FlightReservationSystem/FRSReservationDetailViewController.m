@@ -11,6 +11,12 @@
 
 @interface FRSReservationDetailViewController () <UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet FRSFlightInfoView *flightInfoView;
+@property (weak, nonatomic) IBOutlet UILabel *userid;
+@property (weak, nonatomic) IBOutlet UILabel *numberofPassengers;
+@property (weak, nonatomic) IBOutlet UILabel *passengers;
+@property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UILabel *mobileNumber;
+@property (weak, nonatomic) IBOutlet UILabel *dateofJourney;
 
 - (IBAction)cancelReservationClicked:(id)sender;
 
