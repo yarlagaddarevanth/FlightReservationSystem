@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FRSFlight.h"
 
 @interface FRSFlightInfoView : UIView
 
+-(void)configureViewWithFlight:(FRSFlight *)flight;
 @end

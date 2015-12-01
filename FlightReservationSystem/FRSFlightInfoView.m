@@ -8,6 +8,15 @@
 
 #import "FRSFlightInfoView.h"
 
+@interface FRSFlightInfoView ()
+@property (weak, nonatomic) IBOutlet UILabel *flightNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fromLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *toLabel;
+
+@end
+
 @implementation FRSFlightInfoView
 
 /*
@@ -40,5 +49,14 @@
     view.frame = self.bounds;
     
 }
+
+-(void)configureViewWithFlight:(FRSFlight *)flight{
+    _flightNameLabel.text = [NSString stringWithFormat:@"Name: %@",flight.flightCode];
+    _dateLabel.text = [NSString stringWithFormat:@"Date: %@",flight.departureTime];
+    _timeLabel.text = [NSString stringWithFormat:@"Time: %@",flight.departureTime];
+    _fromLabel.text = flight.source;
+    _toLabel.text = flight.destination;
+}
+
 
 @end

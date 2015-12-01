@@ -6,7 +6,15 @@
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FRSFlightInfoView"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FRSFlightInfoView">
+            <connections>
+                <outlet property="dateLabel" destination="Uu6-dZ-peW" id="irr-NH-iUa"/>
+                <outlet property="flightNameLabel" destination="XPN-cR-emQ" id="caY-dI-L9d"/>
+                <outlet property="fromLabel" destination="f2D-zZ-dzB" id="Zya-lM-ndE"/>
+                <outlet property="timeLabel" destination="8Cb-MP-vr5" id="9tl-5z-JeP"/>
+                <outlet property="toLabel" destination="IiW-lh-6XD" id="pds-Rg-uAf"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view userInteractionEnabled="NO" contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -77,7 +85,7 @@
                 <constraint firstAttribute="trailing" secondItem="IiW-lh-6XD" secondAttribute="trailing" constant="41" id="vnr-uI-hdf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="134" y="114"/>
+            <point key="canvasLocation" x="169" y="114"/>
         </view>
     </objects>
 </document>

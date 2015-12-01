@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FRSFlight.h"
 
 @interface FRSFlightInfoTableViewCell : UITableViewCell
-
+-(void)configureCellWithFlight:(FRSFlight *)flight;
 @end

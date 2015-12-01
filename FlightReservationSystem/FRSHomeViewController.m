@@ -423,7 +423,7 @@ typedef enum : NSUInteger {
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
-    if ([[segue identifier] isEqualToString:SegueShowPayment])
+    if ([[segue identifier] isEqualToString:SeguePushAvailableFlightsList])
     {
         // Get reference to the destination view controller
         FRSAvailableFlightsListViewController *vc = [segue destinationViewController];

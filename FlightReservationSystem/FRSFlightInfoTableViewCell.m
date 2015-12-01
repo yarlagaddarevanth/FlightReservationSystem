@@ -14,6 +14,10 @@
     // Initialization code
 }
 
+-(void)configureCellWithFlight:(FRSFlight *)flight{
+    
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
