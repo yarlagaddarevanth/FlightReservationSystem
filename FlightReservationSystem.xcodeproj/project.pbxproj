@@ -37,6 +37,8 @@
 		F27B82201C0D79ED009CF06A /* FRSViewReservationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B821E1C0D79ED009CF06A /* FRSViewReservationTableViewCell.m */; };
 		F27B82211C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27B821F1C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib */; };
 		F27B82241C0D8452009CF06A /* FRSReservationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B82231C0D8452009CF06A /* FRSReservationDetailViewController.m */; };
+		F27B82281C0D99E0009CF06A /* FRSAdminFlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B82271C0D99E0009CF06A /* FRSAdminFlightsViewController.m */; };
+		F27B822B1C0D9A07009CF06A /* FRSAdminAirportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B822A1C0D9A07009CF06A /* FRSAdminAirportsViewController.m */; };
 		F2BE00B71C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE00B31C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.m */; };
 		F2BE00B81C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE00B51C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.m */; };
 		F2BE00B91C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2BE00B61C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.xib */; };
@@ -131,6 +133,10 @@
 		F27B821F1C0D79ED009CF06A /* FRSViewReservationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRSViewReservationTableViewCell.xib; sourceTree = "<group>"; };
 		F27B82221C0D8452009CF06A /* FRSReservationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSReservationDetailViewController.h; sourceTree = "<group>"; };
 		F27B82231C0D8452009CF06A /* FRSReservationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSReservationDetailViewController.m; sourceTree = "<group>"; };
+		F27B82261C0D99E0009CF06A /* FRSAdminFlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSAdminFlightsViewController.h; sourceTree = "<group>"; };
+		F27B82271C0D99E0009CF06A /* FRSAdminFlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSAdminFlightsViewController.m; sourceTree = "<group>"; };
+		F27B82291C0D9A07009CF06A /* FRSAdminAirportsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSAdminAirportsViewController.h; sourceTree = "<group>"; };
+		F27B822A1C0D9A07009CF06A /* FRSAdminAirportsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSAdminAirportsViewController.m; sourceTree = "<group>"; };
 		F2BE00B21C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSingleLineTextFieldCellVM.h; sourceTree = "<group>"; };
 		F2BE00B31C0A93260004EDD4 /* TRSingleLineTextFieldCellVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSingleLineTextFieldCellVM.m; sourceTree = "<group>"; };
 		F2BE00B41C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSingleTextFieldTableViewCell.h; sourceTree = "<group>"; };
@@ -253,8 +259,7 @@
 				F27B82251C0D85B9009CF06A /* Reservation */,
 				F24472CB1C05C74A00B91B41 /* FRSPaymentViewController.h */,
 				F24472CC1C05C74A00B91B41 /* FRSPaymentViewController.m */,
-				B6F5732C1C0677010049594A /* FRSAdminHomeViewController.h */,
-				B6F5732D1C0677010049594A /* FRSAdminHomeViewController.m */,
+				F27B822C1C0D9A10009CF06A /* Admin */,
 				F222FAF51C0A8608001F6919 /* FRSAvailableFlightsListViewController.h */,
 				F222FAF61C0A8608001F6919 /* FRSAvailableFlightsListViewController.m */,
 				F222FAF81C0A89D7001F6919 /* FRSFlightInfoTableViewCell.h */,
@@ -332,6 +337,19 @@
 				F27B82231C0D8452009CF06A /* FRSReservationDetailViewController.m */,
 			);
 			name = Reservation;
+			sourceTree = "<group>";
+		};
+		F27B822C1C0D9A10009CF06A /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				B6F5732C1C0677010049594A /* FRSAdminHomeViewController.h */,
+				B6F5732D1C0677010049594A /* FRSAdminHomeViewController.m */,
+				F27B82291C0D9A07009CF06A /* FRSAdminAirportsViewController.h */,
+				F27B822A1C0D9A07009CF06A /* FRSAdminAirportsViewController.m */,
+				F27B82261C0D99E0009CF06A /* FRSAdminFlightsViewController.h */,
+				F27B82271C0D99E0009CF06A /* FRSAdminFlightsViewController.m */,
+			);
+			name = Admin;
 			sourceTree = "<group>";
 		};
 		F2BE00BA1C0A93350004EDD4 /* Add Passengers */ = {
@@ -573,6 +591,7 @@
 			files = (
 				F204D1E21BD60460000C164B /* FRSLandingViewController.m in Sources */,
 				F24472CA1C05A96400B91B41 /* FRSHomeViewController.m in Sources */,
+				F27B822B1C0D9A07009CF06A /* FRSAdminAirportsViewController.m in Sources */,
 				F204D1E81BD60460000C164B /* FlightReservationSystem.xcdatamodeld in Sources */,
 				F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */,
 				F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */,
@@ -581,6 +600,7 @@
 				F2BE00C31C0AA6090004EDD4 /* FRSAirport.m in Sources */,
 				F2CB44391C07B217008E6134 /* FRSNetworkingManager.m in Sources */,
 				F2CB443F1C07B2F7008E6134 /* FRSResponseModel.m in Sources */,
+				F27B82281C0D99E0009CF06A /* FRSAdminFlightsViewController.m in Sources */,
 				F2CB444D1C07BBDD008E6134 /* FRSUser.m in Sources */,
 				F2CB44511C07C636008E6134 /* FRSProgressHUD.m in Sources */,
 				F2BE00C61C0AA7B20004EDD4 /* FRSAirportsResponse.m in Sources */,

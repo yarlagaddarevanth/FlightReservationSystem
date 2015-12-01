@@ -9,6 +9,7 @@
 #import "FRSHomeViewController.h"
 #import "FRSSearchFlightsResponse.h"
 #import "FRSAvailableFlightsListViewController.h"
+#import "AppDelegate.h"
 
 #define Default_Button_State_Text @"- select -"
 #define Default_Incomplete_Details_Text @"Incomplete Details!"
@@ -20,6 +21,10 @@ typedef enum : NSUInteger {
 } FRSPickerMode;
 
 @interface FRSHomeViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (weak, nonatomic) FRSUser *loggedInUser;
+
+@property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *selectFromDestButton;
 @property (weak, nonatomic) IBOutlet UIButton *selectToDestinationButton;
@@ -51,6 +56,7 @@ typedef enum : NSUInteger {
 - (IBAction)selectToDestinationButtonTapped:(id)sender;
 - (IBAction)selectDateOfJourneyTapped:(id)sender;
 - (IBAction)selectNumberOfPassengersButtonTapped:(id)sender;
+- (IBAction)signOutClicked:(id)sender;
 
 
 @end
@@ -60,6 +66,9 @@ typedef enum : NSUInteger {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _loggedInUser = [SHARED_APP_DELEGATE loggedInUser];
+    
+    _welcomeLabel.text = [NSString stringWithFormat:@"Welcome %@,",[_loggedInUser fullName]];
     
     //Minumum Date
     [_datePicker setMinimumDate:[NSDate date]];
@@ -341,6 +350,12 @@ typedef enum : NSUInteger {
     _pickerMode = FRSPickerModeNumberOfPassengers;
     [self reloadPickerViewForCurrentMode];
 }
+
+- (IBAction)signOutClicked:(id)sender {
+    [(UINavigationController *)[[SHARED_APP_DELEGATE window] rootViewController] dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 - (IBAction)searchFlightsClicked:(id)sender {
     
 //    if ([self searchFlightsFormValidation]) {
@@ -442,6 +457,16 @@ typedef enum : NSUInteger {
     }
 }
 
-
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if ([identifier isEqualToString:SegueShowViewReservations]) {
+        if ([[_loggedInUser role] isEqualToString:USER_ROLE_GUEST]) {
+            [TSMessage showNotificationWithTitle:@"Hello!" subtitle:@"You need to be Signed In as a registered user to view your reservations." type:TSMessageNotificationTypeWarning];
+            return NO;
+        }
+        else return YES;
+    }
+    else
+        return YES;
+}
 
 @end

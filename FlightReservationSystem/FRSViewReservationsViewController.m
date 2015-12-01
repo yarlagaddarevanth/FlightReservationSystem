@@ -28,15 +28,18 @@ static NSString *FRSViewReservationTableViewCell_Identifier = @"FRSViewReservati
     
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([FRSViewReservationTableViewCell class]) bundle:nil] forCellReuseIdentifier:FRSViewReservationTableViewCell_Identifier];
 
-    //get reservations
-    [self getReservations];
 
     [self.tap setCancelsTouchesInView:NO];
 
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    
     [[self navigationController] setNavigationBarHidden:NO];
+    
+    //get reservations
+    [self getReservations];
+
 }
 
 -(void)getReservations{
@@ -77,7 +80,7 @@ static NSString *FRSViewReservationTableViewCell_Identifier = @"FRSViewReservati
     FRSReservation *reservation = _reservations[indexPath.row];
     _reservationSelected = reservation;
     
-    [self performSegueWithIdentifier:SegueShowViewReservations sender:self];
+    [self performSegueWithIdentifier:SegueShowReservationDetail sender:self];
     //Show Reservation Detail.
 }
 
@@ -85,7 +88,7 @@ static NSString *FRSViewReservationTableViewCell_Identifier = @"FRSViewReservati
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
-    if ([[segue identifier] isEqualToString:SegueShowViewReservations])
+    if ([[segue identifier] isEqualToString:SegueShowReservationDetail])
     {
         // Get reference to the destination view controller
         FRSReservationDetailViewController *vc = [segue destinationViewController];

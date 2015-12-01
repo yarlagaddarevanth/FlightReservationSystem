@@ -25,6 +25,7 @@
 #define SegueShowPayment @"SegueShowPayment"
 #define SegueShowViewReservations @"SegueShowViewReservations"
 #define SegueShowReservationDetail @"SegueShowReservationDetail"
+#define SegueShowAdminHome @"SegueShowAdminHome"
 
 
 #define JSESSIONID_KEY @"JSESSIONID"

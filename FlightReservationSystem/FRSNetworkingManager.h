@@ -36,13 +36,13 @@ typedef void (^FRSParsingCompletionBlock)(id response, NSError *error);
 #pragma mark Airports
 -(void)getAirportsWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
 
-#pragma mark - Reserve
+#pragma mark - Reservations
 -(void)reserveTicketWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion;
-
-#pragma mark - Search Flights
--(void)searchFlightsWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion;
-
-#pragma mark Get Reservations
 -(void)getReservationsWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+-(void)cancelReservationForID:(NSString *)reservationID withCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+
+#pragma mark - Flights
+-(void)searchFlightsWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+-(void)getFlightInfoForFlightID:(NSString *)flightID withCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
 
 @end

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 - (IBAction)signInTapped:(id)sender;
+- (IBAction)EnterAsGuestTapped:(id)sender;
 @end
 
 @implementation FRSLandingViewController
@@ -56,22 +57,39 @@
                         FRSUser *user = (FRSUser *)response;
                         [SHARED_APP_DELEGATE setLoggedInUser:user];
                         [[NSNotificationCenter defaultCenter] postNotificationName:USER_PROFILE_UPDATED_NOTIFICATION object:user];
+                        
+                        if ([user.role isEqualToString:USER_ROLE_ADMIN]) {
+                            [self performSegueWithIdentifier:SegueShowAdminHome sender:nil];
+                        }
+                        else if ([user.role isEqualToString:USER_ROLE_USER]){
+                            [self performSegueWithIdentifier:SeguePushHome sender:nil];
+                        }
+                        else {
+                            //show guest
+                            [self showGuestUser];
+                        }
+
                     }
 
                 }];
                 
-                
+
                 
                 [self removeKeyBoard];
 //                [SHARED_APP_DELEGATE updateAccessTokenExpiry];
 //                [USER_DEFAULTS setValue:loggedInUser.loginResponse.access_token forKey:USER_ACCESS_TOKEN];
                 
 //                [USER_DEFAULTS setValue:[(FRSUser *)response getUserDictionaryOfModel] forKey:USER_PROFILE];
-                [self performSegueWithIdentifier:SeguePushHome sender:nil];
+                
+                
             }
         }];
         
     }
+}
+
+- (IBAction)EnterAsGuestTapped:(id)sender {
+    [self showGuestUser];
 }
 
 -(BOOL)signinFormValidation{
@@ -103,9 +121,33 @@
     return  isValid;
 }
 
+#pragma mark Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:SeguePushHome])
+    {
+        // Get reference to the destination view controller
+//        FRSAvailableFlightsListViewController *vc = [segue destinationViewController];
+        
+        
+    }
+}
+
 #pragma mark - Text Field
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self removeKeyBoard];
     return YES;
+}
+
+#pragma mark - Guest User
+-(void)showGuestUser{
+    FRSUser *user = [FRSUser new];
+    user.firstName = @"Guest";
+    user.lastName = @"";
+    user.role = USER_ROLE_GUEST;
+    [SHARED_APP_DELEGATE setLoggedInUser:user];
+    [self performSegueWithIdentifier:SeguePushHome sender:nil];
+
 }
 @end

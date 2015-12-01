@@ -7,11 +7,13 @@
 //
 
 #import "FRSAdminHomeViewController.h"
+#import "AppDelegate.h"
 
 @interface FRSAdminHomeViewController ()
 //@property (weak, nonatomic) IBOutlet UIButton *selectManageFlights;
 //@property (weak, nonatomic) IBOutlet UIButton *selectManageDestination;
 
+- (IBAction)signOutClicked:(id)sender;
 
 @end
 
@@ -26,6 +28,10 @@
 //    _selectManageFlights.layer.borderColor = [UIColor yellowColor].CGColor;
 //    _selectManageFlights.layer.cornerRadius = 5.0;
     
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [[self navigationController] setNavigationBarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,4 +49,7 @@
 }
 */
 
+- (IBAction)signOutClicked:(id)sender {
+    [(UINavigationController *)[[SHARED_APP_DELEGATE window] rootViewController] popToRootViewControllerAnimated:YES];
+}
 @end

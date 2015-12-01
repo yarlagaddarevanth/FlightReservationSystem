@@ -23,6 +23,6 @@
 @property (nonatomic, strong) NSString *userId;
 @property (nonatomic, strong) NSString *userName;
 
-
+-(NSString *)fullName;
 
 @end
