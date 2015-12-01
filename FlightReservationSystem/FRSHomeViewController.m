@@ -386,7 +386,23 @@ typedef enum : NSUInteger {
 -(void)getSearchResults{
     FRSProgressHUD *HUD = [[FRSProgressHUD alloc] initWithView:self.view showAnimated:YES];
     
-    NSDictionary *parameters = nil;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *stringFromDate = [formatter stringFromDate:_dateOfJourneySelected];
+    
+
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:
+                                @"BLR", @"source",
+                                @"SNF", @"destination",
+                                @"2014-01-01", @"dateOfJourney",
+                                @"3", @"numberOfPassengers",
+                                nil];
+//    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:
+//                                _fromAirportSelected.airportCode, @"source",
+//                                _toAirportSelected.airportCode, @"destination",
+//                                stringFromDate, @"dateOfJourney",
+//                                [NSString stringWithFormat:@"%li",(long)_numberOfPassengersSelected], @"numberOfPassengers",
+//                                nil];
     [[FRSNetworkingManager sharedNetworkingManager] searchFlightsWithParameters:parameters completionBlock:^(id response, NSError *error) {
         
         [HUD hide:NO];

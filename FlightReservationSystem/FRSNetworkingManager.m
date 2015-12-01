@@ -19,7 +19,7 @@
 @class AppDelegate;
 
 //functions/URLs
-#define FRS_API_BASE_HOST @"http://a1d21134.ngrok.io/flight/rs"
+#define FRS_API_BASE_HOST @"http://dec07317.ngrok.io/flight/rs"
 #define FRS_API_USER_APP @"user"
 
 #define FRS_API_USER FRS_API_BASE_HOST "/" FRS_API_USER_APP
@@ -246,7 +246,7 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
     
     [manager.requestSerializer setValue:JSESSIONID forHTTPHeaderField:JSESSIONID_KEY];
     
-    [manager GET:USER_SEARCH_FLIGHTS_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:USER_SEARCH_FLIGHTS_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         FRSResponseModel *response = [self success:responseObject];
         if (response.success) {
             FRSSearchFlightsResponse *searchFlightsResponse = [[FRSSearchFlightsResponse alloc] initWithDictionary:response.data error:nil];
