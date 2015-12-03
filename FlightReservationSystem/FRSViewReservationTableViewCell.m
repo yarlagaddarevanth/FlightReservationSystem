@@ -20,7 +20,7 @@
 }
 
 -(void)configureCellWithReservation:(FRSReservation *)reservation{
-    _reservationID.text = [NSString stringWithFormat:@"reservation: %@",reservation.reservationId];
+    _reservationID.text = [NSString stringWithFormat:@"Reservation ID: %@",reservation.reservationId];
     _passengers.text = [NSString stringWithFormat:@"Passengers: %@",reservation.passengers];
 }
 

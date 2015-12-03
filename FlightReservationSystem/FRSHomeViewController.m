@@ -7,7 +7,7 @@
 //
 
 #import "FRSHomeViewController.h"
-#import "FRSSearchFlightsResponse.h"
+#import "FRSFlightsResponse.h"
 #import "FRSAvailableFlightsListViewController.h"
 #import "AppDelegate.h"
 
@@ -232,6 +232,8 @@ typedef enum : NSUInteger {
     [self showToolBar:YES];
     [self showPickerView:YES];
     
+    [self showDatePicker:NO];
+
     [_pickerView reloadAllComponents];
 }
 
@@ -334,6 +336,8 @@ typedef enum : NSUInteger {
 - (IBAction)selectDateOfJourneyTapped:(id)sender {
     [self showToolBar:YES];
     [self showDatePicker:YES];
+    
+    [self showPickerView:NO];
 }
 
 - (IBAction)selectFromDestinationButtonTapped:(id)sender {
@@ -358,9 +362,9 @@ typedef enum : NSUInteger {
 }
 - (IBAction)searchFlightsClicked:(id)sender {
     
-//    if ([self searchFlightsFormValidation]) {
+    if ([self searchFlightsFormValidation]) {
         [self getSearchResults];
-//    }
+    }
     
 }
 
@@ -407,24 +411,24 @@ typedef enum : NSUInteger {
     NSString *stringFromDate = [formatter stringFromDate:_dateOfJourneySelected];
     
 
-    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:
-                                @"BLR", @"source",
-                                @"SNF", @"destination",
-                                @"2014-01-01", @"dateOfJourney",
-                                @"3", @"numberOfPassengers",
-                                nil];
 //    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:
-//                                _fromAirportSelected.airportCode, @"source",
-//                                _toAirportSelected.airportCode, @"destination",
-//                                stringFromDate, @"dateOfJourney",
-//                                [NSString stringWithFormat:@"%li",(long)_numberOfPassengersSelected], @"numberOfPassengers",
+//                                @"BLR", @"source",
+//                                @"SNF", @"destination",
+//                                @"2014-01-01", @"dateOfJourney",
+//                                @"3", @"numberOfPassengers",
 //                                nil];
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:
+                                _fromAirportSelected.airportCode, @"source",
+                                _toAirportSelected.airportCode, @"destination",
+                                stringFromDate, @"dateOfJourney",
+                                [NSString stringWithFormat:@"%li",(long)_numberOfPassengersSelected], @"numberOfPassengers",
+                                nil];
     [[FRSNetworkingManager sharedNetworkingManager] searchFlightsWithParameters:parameters completionBlock:^(id response, NSError *error) {
         
         [HUD hide:NO];
         
         if (!error) {
-            FRSSearchFlightsResponse *flightResultResponse = (FRSSearchFlightsResponse *)response;
+            FRSFlightsResponse *flightResultResponse = (FRSFlightsResponse *)response;
             _flightResultsArray = flightResultResponse.flights;
 
             [self performSegueWithIdentifier:SeguePushAvailableFlightsList sender:self];

@@ -11,7 +11,7 @@
 #import "FRSResponseModel.h"
 #import "FRSLoginResponse.h"
 #import "FRSAirportsResponse.h"
-#import "FRSSearchFlightsResponse.h"
+#import "FRSFlightsResponse.h"
 #import "FRSViewReservationsResponse.h"
 #import "FRSFlight.h"
 
@@ -20,7 +20,7 @@
 @class AppDelegate;
 
 //functions/URLs
-#define FRS_API_BASE_HOST @"http://79dd47db.ngrok.io/flight/rs"
+#define FRS_API_BASE_HOST @"http://f4236d53.ngrok.io/flight/rs"
 #define FRS_API_USER_APP @"user"
 
 #define FRS_API_USER FRS_API_BASE_HOST "/" FRS_API_USER_APP
@@ -35,6 +35,11 @@
 #define USER_GET_RESERVATIONS_URL FRS_API_USER "/getReservations"
 #define USER_GET_FLIGHT_URL FRS_API_USER "/getFlight"
 #define USER_DELETE_RESERVATION_URL FRS_API_USER "/deleteReservation"
+#define ADMIN_GET_FLIGHTS_URL FRS_API_USER "/getFlights"
+#define ADMIN_ADD_AIRPORTS_URL FRS_API_USER "/addAirports"
+#define ADMIN_DELETE_AIRPORTS_URL FRS_API_USER "/deleteAirports"
+#define ADMIN_ADD_FLIGHTS_URL FRS_API_USER "/saveFlightDetails"
+#define ADMIN_DELETE_FLIGHTS_URL FRS_API_USER "/deleteFlights"
 
 typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
 
@@ -126,11 +131,14 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
 
 -(void)forgotPasswordWithEmailID:(NSString *)email completionBlock:(FRSParsingCompletionBlock)parsingCompletion{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    [manager setRequestSerializer:[AFJSONRequestSerializer serializer]];
+    
     NSDictionary *parameters = @{
-                                 @"emailid": email,
+                                 @"username": email,
                                  };
     
-    [manager POST:USER_FORGOT_PASSWORD_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager PUT:USER_FORGOT_PASSWORD_URL parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //NSLog(@"%s forgotPassword JSON: %@",__PRETTY_FUNCTION__, responseObject);
         FRSResponseModel *response = [self success:responseObject];
         if (response.success) {
@@ -215,7 +223,7 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
     
 }
 
-#pragma mark Airports
+#pragma mark - Airports
 -(void)getAirportsWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -243,6 +251,59 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
     
 }
 
+#pragma mark ADMIN Manage Airports
+
+-(void)addAirportByAdminWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:ADMIN_ADD_AIRPORTS_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        FRSResponseModel *response = [self success:responseObject];
+        if (response.success) {
+            
+        }
+        else [self handleAPIFailure:response];
+        
+        //coFRSon for API success or failure. SO check API falure in the call back also
+        parsingCompletion(response, nil);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        parsingCompletion(nil, error);
+        if (operation.responseString) {
+            [self handleServerFailure:operation];
+        }
+    }];
+}
+
+-(void)deleteAirportForAirportID:(NSString *)airportID withCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager.requestSerializer setValue:JSESSIONID forHTTPHeaderField:JSESSIONID_KEY];
+    
+    [manager PUT:[NSString stringWithFormat:@"%@/%@",ADMIN_DELETE_AIRPORTS_URL,airportID] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        FRSResponseModel *response = [self success:responseObject];
+        if (response.success) {
+            
+        }
+        else [self handleAPIFailure:response];
+        
+        //coFRSon for API success or failure. SO check API falure in the call back also
+        parsingCompletion(response, nil);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        parsingCompletion(nil, error);
+        if (operation.responseString) {
+            [self handleServerFailure:operation];
+        }
+    }];
+    
+}
+
+
 #pragma mark - Flights
 -(void)searchFlightsWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -252,7 +313,7 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
     [manager GET:USER_SEARCH_FLIGHTS_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         FRSResponseModel *response = [self success:responseObject];
         if (response.success) {
-            FRSSearchFlightsResponse *searchFlightsResponse = [[FRSSearchFlightsResponse alloc] initWithDictionary:response.data error:nil];
+            FRSFlightsResponse *searchFlightsResponse = [[FRSFlightsResponse alloc] initWithDictionary:response.data error:nil];
             parsingCompletion(searchFlightsResponse, nil);
             return ;
         }
@@ -299,6 +360,82 @@ typedef void (^FRSAPIResultBlock)(FRSResponseModel *response, NSError *error);
     
 }
 
+#pragma mark ADMIN Manage Flights
+-(void)getFlightsForAdminWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager.requestSerializer setValue:JSESSIONID forHTTPHeaderField:JSESSIONID_KEY];
+    
+    [manager GET:ADMIN_GET_FLIGHTS_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        FRSResponseModel *response = [self success:responseObject];
+        if (response.success) {
+            FRSFlightsResponse *flightsResponse = [[FRSFlightsResponse alloc] initWithDictionary:response.data error:nil];
+            parsingCompletion(flightsResponse, nil);
+            return ;
+        }
+        else [self handleAPIFailure:response];
+        
+        //coFRSon for API success or failure. SO check API falure in the call back also
+        parsingCompletion(response, nil);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        parsingCompletion(nil, error);
+        if (operation.responseString) {
+            [self handleServerFailure:operation];
+        }
+    }];
+    
+}
+
+-(void)addFlightByAdminWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:ADMIN_ADD_FLIGHTS_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        FRSResponseModel *response = [self success:responseObject];
+        if (response.success) {
+            
+        }
+        else [self handleAPIFailure:response];
+        
+        //coFRSon for API success or failure. SO check API falure in the call back also
+        parsingCompletion(response, nil);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        parsingCompletion(nil, error);
+        if (operation.responseString) {
+            [self handleServerFailure:operation];
+        }
+    }];
+}
+-(void)deleteFlightForFlightID:(NSString *)flightID withCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager.requestSerializer setValue:JSESSIONID forHTTPHeaderField:JSESSIONID_KEY];
+    
+    [manager PUT:[NSString stringWithFormat:@"%@/%@",ADMIN_DELETE_FLIGHTS_URL,flightID] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        FRSResponseModel *response = [self success:responseObject];
+        if (response.success) {
+            
+        }
+        else [self handleAPIFailure:response];
+        
+        //coFRSon for API success or failure. SO check API falure in the call back also
+        parsingCompletion(response, nil);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        parsingCompletion(nil, error);
+        if (operation.responseString) {
+            [self handleServerFailure:operation];
+        }
+    }];
+    
+}
 
 
 #pragma mark - Reservations

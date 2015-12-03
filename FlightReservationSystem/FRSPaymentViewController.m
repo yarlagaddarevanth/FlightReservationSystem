@@ -62,6 +62,9 @@
                                _reservation.passengers,@"passengers",
                                _reservation.address,@"address",
                                _reservation.mobileNumber,@"mobileNumber",
+                               _reservation.fromAirport.airportName,@"source",
+                               _reservation.toAirport.airportName,@"destination",
+                               _reservation.flight.price,@"price",
                                nil];
     [[FRSNetworkingManager sharedNetworkingManager] reserveTicketWithParameters:parameters completionBlock:^(id response, NSError *error) {
         [HUD hide:NO];

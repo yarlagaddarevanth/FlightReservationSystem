@@ -30,6 +30,10 @@
 @property (nonatomic) NSString *departureTime;
 @property (nonatomic) NSString *arrivalTime;
 
+-(NSString *)displayDepartureDateStr;
+-(NSString *)displayDepartureTimeStr;
+-(NSString *)displayArrivalDateStr;
+-(NSString *)displayArrivalTimeStr;
 
 /*
  

@@ -25,7 +25,12 @@
 #define SegueShowPayment @"SegueShowPayment"
 #define SegueShowViewReservations @"SegueShowViewReservations"
 #define SegueShowReservationDetail @"SegueShowReservationDetail"
+
 #define SegueShowAdminHome @"SegueShowAdminHome"
+#define SegueShowAdminShowAirports @"SegueShowAdminShowAirports"
+#define SegueShowAdminShowFlights @"SegueShowAdminShowFlights"
+#define SegueShowAdminAddAirport @"SegueShowAdminAddAirport"
+#define SegueShowAdminAddFlight @"SegueShowAdminAddFlight"
 
 
 #define JSESSIONID_KEY @"JSESSIONID"

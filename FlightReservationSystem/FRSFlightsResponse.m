@@ -6,8 +6,8 @@
 //  Copyright © 2015 Revanth Kumar. All rights reserved.
 //
 
-#import "FRSSearchFlightsResponse.h"
+#import "FRSFlightsResponse.h"
 
-@implementation FRSSearchFlightsResponse
+@implementation FRSFlightsResponse
 
 @end

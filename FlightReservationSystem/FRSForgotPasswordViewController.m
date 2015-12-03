@@ -9,7 +9,9 @@
 #import "FRSForgotPasswordViewController.h"
 
 @interface FRSForgotPasswordViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 
+- (IBAction)sendPasswordButtonClicked:(id)sender;
 @end
 
 @implementation FRSForgotPasswordViewController
@@ -38,4 +40,39 @@
 }
 */
 
+- (IBAction)sendPasswordButtonClicked:(id)sender {
+    if ([self validateFormSuccess]) {
+        FRSProgressHUD *HUD = [[FRSProgressHUD alloc] initWithView:self.view showAnimated:YES];
+        
+        [[FRSNetworkingManager sharedNetworkingManager] forgotPasswordWithEmailID:_emailTextField.text completionBlock:^(id response, NSError *error) {
+            
+            [HUD hide:NO];
+            
+            if (!error) {
+                [TSMessage showNotificationWithTitle:@"Success" subtitle:@"We have sent you a temporary password. Please check you email." type:TSMessageNotificationTypeWarning];
+                [self performSelector:@selector(goBackToPreviousVC) withObject:nil afterDelay:1.5];
+            }
+            
+
+        }];
+
+    }
+}
+
+-(void)goBackToPreviousVC{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+-(BOOL)validateFormSuccess{
+    BOOL isValid = YES;
+    if (![_emailTextField.text isValid]) {
+        [TSMessage showNotificationWithTitle:@"Email" subtitle:@"Please enter your email id." type:TSMessageNotificationTypeWarning];
+        isValid = NO;
+    }
+    else if (![_emailTextField.text isValidEmail]) {
+        [TSMessage showNotificationWithTitle:@"Email" subtitle:@"Please enter a valid email id." type:TSMessageNotificationTypeWarning];
+        isValid = NO;
+    }
+    return isValid;
+}
 @end

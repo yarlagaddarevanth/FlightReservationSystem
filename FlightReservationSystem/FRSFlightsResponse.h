@@ -9,7 +9,7 @@
 #import "FRSResponseModel.h"
 #import "FRSFlight.h"
 
-@interface FRSSearchFlightsResponse : FRSResponseModel
+@interface FRSFlightsResponse : FRSResponseModel
 
 @property (nonatomic) NSArray<FRSFlight> *flights;
 

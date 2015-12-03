@@ -1,5 +1,5 @@
 //
-//  FRSManageDestinationViewController.h
+//  FRSManageFlightViewController.h
 //  FlightReservationSystem
 //
 //  Created by laksmikanth somavarapu on 25/11/2015.
@@ -8,6 +8,6 @@
 
 #import "FRSBaseViewController.h"
 
-@interface FRSManageDestinationViewController : FRSBaseViewController
+@interface FRSAdminAddFlightViewController : FRSBaseViewController
 
 @end

@@ -33,8 +33,11 @@ typedef void (^FRSParsingCompletionBlock)(id response, NSError *error);
 //Get User Details
 -(void)getUserDetailsWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
 
-#pragma mark Airports
+#pragma mark - Airports
 -(void)getAirportsWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+#pragma mark Admin Manage Airports
+-(void)addAirportByAdminWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+-(void)deleteAirportForAirportID:(NSString *)airportID withCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
 
 #pragma mark - Reservations
 -(void)reserveTicketWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion;
@@ -44,5 +47,10 @@ typedef void (^FRSParsingCompletionBlock)(id response, NSError *error);
 #pragma mark - Flights
 -(void)searchFlightsWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion;
 -(void)getFlightInfoForFlightID:(NSString *)flightID withCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+
+#pragma mark ADMIN Manage Flights
+-(void)getFlightsForAdminWithCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+-(void)addFlightByAdminWithParameters:(NSDictionary *)parameters completionBlock:(FRSParsingCompletionBlock)parsingCompletion;
+-(void)deleteFlightForFlightID:(NSString *)flightID withCompletionBlock:(FRSParsingCompletionBlock)parsingCompletion;
 
 @end

@@ -39,7 +39,7 @@ static NSString *FRSFlightInfoTableViewCell_Identifier = @"FRSFlightInfoTableVie
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _reservation.noOfPassengers;
+    return _flightsArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -79,7 +79,7 @@ static NSString *FRSFlightInfoTableViewCell_Identifier = @"FRSFlightInfoTableVie
         
         // Pass any objects to the view controller here, like...
         _reservation.flight = _flightSelected;
-        vc.reservation = _reservation;
+        vc.reservation = [_reservation copy];
         
     }
 }

@@ -11,13 +11,23 @@
 #import "TRSingleTextFieldTableViewCell.h"
 #import "FRSPaymentViewController.h"
 #import "FRSFlightInfoView.h"
+#import "AppDelegate.h"
+
+#define PROMO_CODE @"UCM"
+#define ROOM_PRICE 50
 
 static NSString *TRSingleTextFieldTableViewCell_Identifier = @"TRSingleTextFieldTableViewCell";
 
-@interface FRSReservationStep2Viewcontroller () <UITableViewDataSource, UITableViewDelegate>
+@interface FRSReservationStep2Viewcontroller () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet FRSFlightInfoView *flightInfoView;
 @property (weak, nonatomic) IBOutlet UITextField *mobileTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *promoCodeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *roomsTextField;
+@property (nonatomic) int originalPrice;
+@property (nonatomic) BOOL applyPromoCodesPrice;
+@property (nonatomic) BOOL applyRoomsPrice;
+- (IBAction)applyPromoCodeClicked:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITableView *passengersTableView;
 @property (nonatomic) NSMutableArray *cellVMsArray;
@@ -33,10 +43,17 @@ static NSString *TRSingleTextFieldTableViewCell_Identifier = @"TRSingleTextField
     // Do any additional setup after loading the view.
     [_passengersTableView registerNib:[UINib nibWithNibName:NSStringFromClass([TRSingleTextFieldTableViewCell class]) bundle:nil] forCellReuseIdentifier:TRSingleTextFieldTableViewCell_Identifier];
     
-    [_flightInfoView configureViewWithFlight:_reservation.flight];
+    _originalPrice = _reservation.flight.price.intValue;
+    _applyPromoCodesPrice = NO;
+    _applyRoomsPrice = NO;
+
+    [self updateFlightInfoForPrice];
     [self configureTableCellVMs];
 }
 
+-(void)updateFlightInfoForPrice{
+    [_flightInfoView configureViewWithFlight:_reservation.flight];
+}
 -(void)configureTableCellVMs{
     if (!_cellVMsArray) {
         _cellVMsArray = [[NSMutableArray alloc] initWithCapacity:0];
@@ -165,7 +182,54 @@ static NSString *TRSingleTextFieldTableViewCell_Identifier = @"TRSingleTextField
 
 - (IBAction)paymentButtonClicked:(id)sender {
     if ([self validatePassengersForm]) {
-        [self performSegueWithIdentifier:SegueShowPayment sender:self];
+        if ([[[SHARED_APP_DELEGATE loggedInUser] role] isEqualToString:USER_ROLE_GUEST]) {
+            [TSMessage showNotificationWithTitle:@"Hello!" subtitle:@"You need to be Signed In as a registered user to reserve your ticket." type:TSMessageNotificationTypeWarning];
+        }
+        else {
+            [self performSegueWithIdentifier:SegueShowPayment sender:self];
+        }
+
     }
+}
+- (IBAction)applyPromoCodeClicked:(id)sender {
+    
+    if (_promoCodeTextField.text.isValid) {
+        if ([_promoCodeTextField.text isEqualToString:PROMO_CODE]) {
+            [TSMessage showNotificationWithTitle:@"Success!" subtitle:@"You got 50% off from the original price." type:TSMessageNotificationTypeSuccess];
+            
+            _applyPromoCodesPrice = YES;
+        }
+        else{
+            [TSMessage showNotificationWithTitle:@"Invalid Promo Code!" subtitle:@"This is not a valid Promo Code." type:TSMessageNotificationTypeWarning];
+        }
+        
+    }
+    
+    //Rooms
+    if (_roomsTextField.text.isValid) {
+        _applyRoomsPrice = YES;
+    }
+    
+    [self computeNetPrice];
+    [self updateFlightInfoForPrice];
+    
+    //reset
+    _applyPromoCodesPrice = NO;
+    _applyRoomsPrice = NO;
+    
+}
+
+-(void)computeNetPrice{
+    int netPrice = _originalPrice;
+    if (_applyPromoCodesPrice) {
+        
+        netPrice = _originalPrice/2;
+    }
+    
+    if (_applyRoomsPrice) {
+        netPrice = netPrice + _roomsTextField.text.intValue*ROOM_PRICE;
+    }
+    _reservation.flight.price = [NSString stringWithFormat:@"%d",netPrice];
+
 }
 @end

@@ -27,6 +27,9 @@
 @property (nonatomic) NSString *passengers;
 @property (nonatomic) NSString *address;
 @property (nonatomic) NSString *mobileNumber;
+@property (nonatomic) NSString *source;
+@property (nonatomic) NSString *destination;
+@property (nonatomic) NSString *price;
 @property (nonatomic) NSDate *dateOfJourney;
 
 /*

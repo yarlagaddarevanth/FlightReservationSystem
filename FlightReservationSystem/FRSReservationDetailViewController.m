@@ -11,7 +11,6 @@
 
 @interface FRSReservationDetailViewController () <UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet FRSFlightInfoView *flightInfoView;
-@property (weak, nonatomic) IBOutlet UILabel *userid;
 @property (weak, nonatomic) IBOutlet UILabel *numberofPassengers;
 @property (weak, nonatomic) IBOutlet UILabel *passengers;
 @property (weak, nonatomic) IBOutlet UILabel *address;
@@ -28,12 +27,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     [self updateUIDataForReservation];
     [self getFlightInfoFromServer];
     
 }
 -(void)updateUIDataForReservation{
-    
+    _numberofPassengers.text = [NSString stringWithFormat:@"Number of Passengers: %ld",(long)_reservation.noOfPassengers];
+    _passengers.text = [NSString stringWithFormat:@"Passengers: %@",_reservation.passengers];
+    _address.text = [NSString stringWithFormat:@"Address: %@",_reservation.address];
+    _mobileNumber.text = [NSString stringWithFormat:@"Mobile: %@",_reservation.mobileNumber];
+    _dateofJourney.text = [NSString stringWithFormat:@"Price: $%@",_reservation.price];
 }
 
 -(void)getFlightInfoFromServer{
@@ -45,6 +49,7 @@
         
         if (!error) {
             FRSFlight *flight = (FRSFlight *)response;
+            flight.price = _reservation.price;
             [_flightInfoView configureViewWithFlight:flight];
         }
         
