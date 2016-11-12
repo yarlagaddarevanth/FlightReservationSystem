@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BC0933BFF85BA7C051B806A /* libPods-FlightReservationSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB04014D05932616C37F9E7 /* libPods-FlightReservationSystem.a */; };
+		4A8C68BD083E61D0285280B6 /* libPods-FlightReservationSystemUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 821378488612395854C0B85A /* libPods-FlightReservationSystemUITests.a */; };
+		B2DD70F197E3761F4D343DFF /* libPods-FlightReservationSystemTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1514D42E35107C609F22733 /* libPods-FlightReservationSystemTests.a */; };
 		B6019EAF1C0A7FAE006BBE92 /* FRSReservationStep2Viewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = B6019EAE1C0A7FAE006BBE92 /* FRSReservationStep2Viewcontroller.m */; };
 		B6F5732E1C0677010049594A /* FRSAdminHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F5732D1C0677010049594A /* FRSAdminHomeViewController.m */; };
 		B6F573311C0680130049594A /* FRSAdminAddFlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F573301C0680130049594A /* FRSAdminAddFlightViewController.m */; };
 		B6F573341C0684890049594A /* FRSAdminAddAirportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F573331C0684890049594A /* FRSAdminAddAirportViewController.m */; };
+		D22C7374AB359237CAD14F69 /* libPods-FlightReservationSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC2F52DB5B3D81560E753A5 /* libPods-FlightReservationSystem.a */; };
 		F204D1DC1BD60460000C164B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DB1BD60460000C164B /* main.m */; };
 		F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1DE1BD60460000C164B /* AppDelegate.m */; };
 		F204D1E21BD60460000C164B /* FRSLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1E11BD60460000C164B /* FRSLandingViewController.m */; };
@@ -74,9 +76,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DFA4E3BEE3FAD4CEA5596A6 /* Pods-FlightReservationSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem.release.xcconfig"; sourceTree = "<group>"; };
-		4DB04014D05932616C37F9E7 /* libPods-FlightReservationSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlightReservationSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		860E48A865C0E70792C82D37 /* Pods-FlightReservationSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem.debug.xcconfig"; sourceTree = "<group>"; };
+		2B45A9567351B595E8541D5C /* Pods-FlightReservationSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem.release.xcconfig"; sourceTree = "<group>"; };
+		40B3532C4D1CA57057D36AF5 /* Pods-FlightReservationSystemUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystemUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystemUITests/Pods-FlightReservationSystemUITests.release.xcconfig"; sourceTree = "<group>"; };
+		533FB288B3E14B71041FBF2B /* Pods-FlightReservationSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystemTests/Pods-FlightReservationSystemTests.release.xcconfig"; sourceTree = "<group>"; };
+		7BC2F52DB5B3D81560E753A5 /* libPods-FlightReservationSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlightReservationSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		821378488612395854C0B85A /* libPods-FlightReservationSystemUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlightReservationSystemUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9747ED98DAF2CA66C33A5013 /* Pods-FlightReservationSystemTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystemTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystemTests/Pods-FlightReservationSystemTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABAB615F35571B6D4695E12D /* Pods-FlightReservationSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		B6019EAD1C0A7FAE006BBE92 /* FRSReservationStep2Viewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSReservationStep2Viewcontroller.h; sourceTree = "<group>"; };
 		B6019EAE1C0A7FAE006BBE92 /* FRSReservationStep2Viewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSReservationStep2Viewcontroller.m; sourceTree = "<group>"; };
 		B6F5732C1C0677010049594A /* FRSAdminHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSAdminHomeViewController.h; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 		B6F573301C0680130049594A /* FRSAdminAddFlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSAdminAddFlightViewController.m; sourceTree = "<group>"; };
 		B6F573321C0684890049594A /* FRSAdminAddAirportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSAdminAddAirportViewController.h; sourceTree = "<group>"; };
 		B6F573331C0684890049594A /* FRSAdminAddAirportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSAdminAddAirportViewController.m; sourceTree = "<group>"; };
+		C1514D42E35107C609F22733 /* libPods-FlightReservationSystemTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlightReservationSystemTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F204D1D71BD60460000C164B /* FlightReservationSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightReservationSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F204D1DB1BD60460000C164B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F204D1DD1BD60460000C164B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -168,6 +175,7 @@
 		F2CB444E1C07C06E008E6134 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		F2CB444F1C07C636008E6134 /* FRSProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSProgressHUD.h; sourceTree = "<group>"; };
 		F2CB44501C07C636008E6134 /* FRSProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSProgressHUD.m; sourceTree = "<group>"; };
+		F56ECC2F009883E8C18AA587 /* Pods-FlightReservationSystemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightReservationSystemUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlightReservationSystemUITests/Pods-FlightReservationSystemUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC0933BFF85BA7C051B806A /* libPods-FlightReservationSystem.a in Frameworks */,
+				D22C7374AB359237CAD14F69 /* libPods-FlightReservationSystem.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DD70F197E3761F4D343DFF /* libPods-FlightReservationSystemTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,25 +199,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8C68BD083E61D0285280B6 /* libPods-FlightReservationSystemUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8F1B585B3AEA7C31BE19AC03 /* Pods */ = {
+		0AE2A8CE55CA9F09492A3491 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				860E48A865C0E70792C82D37 /* Pods-FlightReservationSystem.debug.xcconfig */,
-				0DFA4E3BEE3FAD4CEA5596A6 /* Pods-FlightReservationSystem.release.xcconfig */,
+				ABAB615F35571B6D4695E12D /* Pods-FlightReservationSystem.debug.xcconfig */,
+				2B45A9567351B595E8541D5C /* Pods-FlightReservationSystem.release.xcconfig */,
+				9747ED98DAF2CA66C33A5013 /* Pods-FlightReservationSystemTests.debug.xcconfig */,
+				533FB288B3E14B71041FBF2B /* Pods-FlightReservationSystemTests.release.xcconfig */,
+				F56ECC2F009883E8C18AA587 /* Pods-FlightReservationSystemUITests.debug.xcconfig */,
+				40B3532C4D1CA57057D36AF5 /* Pods-FlightReservationSystemUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CC6D7F386EB5D6CA019914BA /* Frameworks */ = {
+		14C9A9BF880935983B5C189E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DB04014D05932616C37F9E7 /* libPods-FlightReservationSystem.a */,
+				7BC2F52DB5B3D81560E753A5 /* libPods-FlightReservationSystem.a */,
+				C1514D42E35107C609F22733 /* libPods-FlightReservationSystemTests.a */,
+				821378488612395854C0B85A /* libPods-FlightReservationSystemUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,8 +236,8 @@
 				F204D1F61BD60460000C164B /* FlightReservationSystemTests */,
 				F204D2011BD60460000C164B /* FlightReservationSystemUITests */,
 				F204D1D81BD60460000C164B /* Products */,
-				8F1B585B3AEA7C31BE19AC03 /* Pods */,
-				CC6D7F386EB5D6CA019914BA /* Frameworks */,
+				0AE2A8CE55CA9F09492A3491 /* Pods */,
+				14C9A9BF880935983B5C189E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -407,12 +423,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F204D2071BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystem" */;
 			buildPhases = (
-				FA6948D74C4FF91BE4D023CA /* Check Pods Manifest.lock */,
+				91F79C723E3C2B0DEA052742 /* [CP] Check Pods Manifest.lock */,
 				F204D1D31BD60460000C164B /* Sources */,
 				F204D1D41BD60460000C164B /* Frameworks */,
 				F204D1D51BD60460000C164B /* Resources */,
-				8882E156162A7BE047997BF5 /* Embed Pods Frameworks */,
-				131F3A0E2B877A945D219BD8 /* Copy Pods Resources */,
+				B071B625A95A811CB77D5DE3 /* [CP] Embed Pods Frameworks */,
+				8CE81FC076974DFEAECFE2CE /* [CP] Copy Pods Resources */,
+				F202E9BC1DD6B49F0060CE9E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -427,9 +444,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F204D20A1BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystemTests" */;
 			buildPhases = (
+				035E75A54F44CFD3ED612554 /* [CP] Check Pods Manifest.lock */,
 				F204D1EF1BD60460000C164B /* Sources */,
 				F204D1F01BD60460000C164B /* Frameworks */,
 				F204D1F11BD60460000C164B /* Resources */,
+				866725D39F89F66B85EE5D07 /* [CP] Embed Pods Frameworks */,
+				817D02814337E7ACB93ECDE8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -445,9 +465,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F204D20D1BD60460000C164B /* Build configuration list for PBXNativeTarget "FlightReservationSystemUITests" */;
 			buildPhases = (
+				774CD443146AC5A125E1B54E /* [CP] Check Pods Manifest.lock */,
 				F204D1FA1BD60460000C164B /* Sources */,
 				F204D1FB1BD60460000C164B /* Frameworks */,
 				F204D1FC1BD60460000C164B /* Resources */,
+				0CC948EA2E8D075A2FDF9D36 /* [CP] Embed Pods Frameworks */,
+				A924777BCC708C56F4CE4115 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -537,14 +560,89 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		131F3A0E2B877A945D219BD8 /* Copy Pods Resources */ = {
+		035E75A54F44CFD3ED612554 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0CC948EA2E8D075A2FDF9D36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightReservationSystemUITests/Pods-FlightReservationSystemUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		774CD443146AC5A125E1B54E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		817D02814337E7ACB93ECDE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightReservationSystemTests/Pods-FlightReservationSystemTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		866725D39F89F66B85EE5D07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightReservationSystemTests/Pods-FlightReservationSystemTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CE81FC076974DFEAECFE2CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,14 +650,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8882E156162A7BE047997BF5 /* Embed Pods Frameworks */ = {
+		91F79C723E3C2B0DEA052742 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A924777BCC708C56F4CE4115 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightReservationSystemUITests/Pods-FlightReservationSystemUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B071B625A95A811CB77D5DE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,20 +695,18 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightReservationSystem/Pods-FlightReservationSystem-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FA6948D74C4FF91BE4D023CA /* Check Pods Manifest.lock */ = {
+		F202E9BC1DD6B49F0060CE9E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 0fb1d188590a1704a013fb6dc28488e8eb2a616f 2d7c3674e8df3e648525dd6a2d1648b8d11eb3cf648bc73a7317782c095996f5";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -762,11 +888,12 @@
 		};
 		F204D2081BD60460000C164B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 860E48A865C0E70792C82D37 /* Pods-FlightReservationSystem.debug.xcconfig */;
+			baseConfigurationReference = ABAB615F35571B6D4695E12D /* Pods-FlightReservationSystem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlightReservationSystem/FlightReservationSystem-PrefixHeader.pch";
 				INFOPLIST_FILE = FlightReservationSystem/Info.plist;
@@ -781,7 +908,7 @@
 		};
 		F204D2091BD60460000C164B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DFA4E3BEE3FAD4CEA5596A6 /* Pods-FlightReservationSystem.release.xcconfig */;
+			baseConfigurationReference = 2B45A9567351B595E8541D5C /* Pods-FlightReservationSystem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -800,6 +927,7 @@
 		};
 		F204D20B1BD60460000C164B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9747ED98DAF2CA66C33A5013 /* Pods-FlightReservationSystemTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FlightReservationSystemTests/Info.plist;
@@ -812,6 +940,7 @@
 		};
 		F204D20C1BD60460000C164B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 533FB288B3E14B71041FBF2B /* Pods-FlightReservationSystemTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FlightReservationSystemTests/Info.plist;
@@ -824,6 +953,7 @@
 		};
 		F204D20E1BD60460000C164B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F56ECC2F009883E8C18AA587 /* Pods-FlightReservationSystemUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FlightReservationSystemUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -836,6 +966,7 @@
 		};
 		F204D20F1BD60460000C164B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40B3532C4D1CA57057D36AF5 /* Pods-FlightReservationSystemUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FlightReservationSystemUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
