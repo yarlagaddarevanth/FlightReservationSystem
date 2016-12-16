@@ -9,6 +9,8 @@ pod "TSMessages"
 pod "AFNetworking", "~> 2.0"
 pod 'JSONModel'
 pod 'MBProgressHUD', '~> 0.9.1'
+pod 'Fabric'
+pod 'Crashlytics'
 
 end
 
