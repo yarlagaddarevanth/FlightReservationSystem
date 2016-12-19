@@ -52,6 +52,7 @@
 		F2BE00C31C0AA6090004EDD4 /* FRSAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE00C21C0AA6090004EDD4 /* FRSAirport.m */; };
 		F2BE00C61C0AA7B20004EDD4 /* FRSAirportsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE00C51C0AA7B20004EDD4 /* FRSAirportsResponse.m */; };
 		F2BE00C91C0AB3B80004EDD4 /* FRSFlightsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE00C81C0AB3B80004EDD4 /* FRSFlightsResponse.m */; };
+		F2C9EE671E0773D1009CB510 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F2C9EE661E0773D1009CB510 /* .gitignore */; };
 		F2CB44391C07B217008E6134 /* FRSNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CB44381C07B217008E6134 /* FRSNetworkingManager.m */; };
 		F2CB443C1C07B2E6008E6134 /* FRSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CB443B1C07B2E6008E6134 /* FRSBaseModel.m */; };
 		F2CB443F1C07B2F7008E6134 /* FRSResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CB443E1C07B2F7008E6134 /* FRSResponseModel.m */; };
@@ -166,6 +167,7 @@
 		F2BE00C51C0AA7B20004EDD4 /* FRSAirportsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSAirportsResponse.m; sourceTree = "<group>"; };
 		F2BE00C71C0AB3B80004EDD4 /* FRSFlightsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSFlightsResponse.h; sourceTree = "<group>"; };
 		F2BE00C81C0AB3B80004EDD4 /* FRSFlightsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSFlightsResponse.m; sourceTree = "<group>"; };
+		F2C9EE661E0773D1009CB510 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F2CB44371C07B217008E6134 /* FRSNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSNetworkingManager.h; sourceTree = "<group>"; };
 		F2CB44381C07B217008E6134 /* FRSNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSNetworkingManager.m; sourceTree = "<group>"; };
 		F2CB443A1C07B2E6008E6134 /* FRSBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSBaseModel.h; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		F204D1CE1BD60460000C164B = {
 			isa = PBXGroup;
 			children = (
+				F2C9EE661E0773D1009CB510 /* .gitignore */,
 				F204D1D91BD60460000C164B /* FlightReservationSystem */,
 				F204D1F61BD60460000C164B /* FlightReservationSystemTests */,
 				F204D2011BD60460000C164B /* FlightReservationSystemUITests */,
@@ -544,6 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C9EE671E0773D1009CB510 /* .gitignore in Resources */,
 				F204D1ED1BD60460000C164B /* LaunchScreen.storyboard in Resources */,
 				F2BE00B91C0A93260004EDD4 /* TRSingleTextFieldTableViewCell.xib in Resources */,
 				F222FAFC1C0A89D7001F6919 /* FRSFlightInfoTableViewCell.xib in Resources */,
