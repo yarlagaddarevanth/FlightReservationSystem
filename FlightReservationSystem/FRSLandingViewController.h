@@ -11,6 +11,13 @@
 
 @interface FRSLandingViewController : FRSBaseViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
+
+- (IBAction)signInTapped:(id)sender;
+- (IBAction)EnterAsGuestTapped:(id)sender;
 
 @end
 

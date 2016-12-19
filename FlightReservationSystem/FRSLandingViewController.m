@@ -10,11 +10,7 @@
 #import "AppDelegate.h"
 
 @interface FRSLandingViewController () <UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
-- (IBAction)signInTapped:(id)sender;
-- (IBAction)EnterAsGuestTapped:(id)sender;
 @end
 
 @implementation FRSLandingViewController
@@ -97,7 +93,7 @@
     if (![_emailTextField.text isValidEmail]) {
         if (_emailTextField.text.length == 0) {
             [TSMessage showNotificationWithTitle:@"Email"
-                                        subtitle:@"Please enter your email id."
+                                        subtitle:@"Please fill the Email field."
                                             type:TSMessageNotificationTypeWarning];
         }else
             [TSMessage showNotificationWithTitle:@"Email"

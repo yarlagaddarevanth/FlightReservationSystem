@@ -23,6 +23,9 @@
 		F204D1ED1BD60460000C164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204D1EB1BD60460000C164B /* LaunchScreen.storyboard */; };
 		F204D1F81BD60460000C164B /* FlightReservationSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D1F71BD60460000C164B /* FlightReservationSystemTests.m */; };
 		F204D2031BD60460000C164B /* FlightReservationSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */; };
+		F205E1E81E04B2CE007E1CE8 /* FRSLandingVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F205E1E71E04B2CE007E1CE8 /* FRSLandingVCTests.m */; };
+		F205E1EB1E04B517007E1CE8 /* FRSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = F205E1EA1E04B517007E1CE8 /* FRSCard.m */; };
+		F205E1ED1E04B57F007E1CE8 /* FRSCardTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F205E1EC1E04B57F007E1CE8 /* FRSCardTestCase.m */; };
 		F222FAF21C0A8281001F6919 /* FRSFlightInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FAF11C0A8281001F6919 /* FRSFlightInfoView.m */; };
 		F222FAF41C0A82A9001F6919 /* FRSFlightInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F222FAF31C0A82A9001F6919 /* FRSFlightInfoView.xib */; };
 		F222FAF71C0A8608001F6919 /* FRSAvailableFlightsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FAF61C0A8608001F6919 /* FRSAvailableFlightsListViewController.m */; };
@@ -109,6 +112,10 @@
 		F204D1FE1BD60460000C164B /* FlightReservationSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightReservationSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F204D2021BD60460000C164B /* FlightReservationSystemUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightReservationSystemUITests.m; sourceTree = "<group>"; };
 		F204D2041BD60460000C164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F205E1E71E04B2CE007E1CE8 /* FRSLandingVCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSLandingVCTests.m; sourceTree = "<group>"; };
+		F205E1E91E04B517007E1CE8 /* FRSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSCard.h; sourceTree = "<group>"; };
+		F205E1EA1E04B517007E1CE8 /* FRSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSCard.m; sourceTree = "<group>"; };
+		F205E1EC1E04B57F007E1CE8 /* FRSCardTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSCardTestCase.m; sourceTree = "<group>"; };
 		F222FAF01C0A8281001F6919 /* FRSFlightInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRSFlightInfoView.h; sourceTree = "<group>"; };
 		F222FAF11C0A8281001F6919 /* FRSFlightInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRSFlightInfoView.m; sourceTree = "<group>"; };
 		F222FAF31C0A82A9001F6919 /* FRSFlightInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRSFlightInfoView.xib; sourceTree = "<group>"; };
@@ -308,6 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				F204D1F71BD60460000C164B /* FlightReservationSystemTests.m */,
+				F205E1E71E04B2CE007E1CE8 /* FRSLandingVCTests.m */,
+				F205E1EC1E04B57F007E1CE8 /* FRSCardTestCase.m */,
 				F204D1F91BD60460000C164B /* Info.plist */,
 			);
 			path = FlightReservationSystemTests;
@@ -403,6 +412,8 @@
 				F27B82181C0D7695009CF06A /* FRSViewReservationsResponse.m */,
 				F2BE00C11C0AA6090004EDD4 /* FRSAirport.h */,
 				F2BE00C21C0AA6090004EDD4 /* FRSAirport.m */,
+				F205E1E91E04B517007E1CE8 /* FRSCard.h */,
+				F205E1EA1E04B517007E1CE8 /* FRSCard.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -722,6 +733,7 @@
 				F204D1DF1BD60460000C164B /* AppDelegate.m in Sources */,
 				F24472BD1C05955400B91B41 /* FRSBaseViewController.m in Sources */,
 				B6F573341C0684890049594A /* FRSAdminAddAirportViewController.m in Sources */,
+				F205E1EB1E04B517007E1CE8 /* FRSCard.m in Sources */,
 				F24472C31C05958D00B91B41 /* FRSForgotPasswordViewController.m in Sources */,
 				F2BE00C31C0AA6090004EDD4 /* FRSAirport.m in Sources */,
 				F2CB44391C07B217008E6134 /* FRSNetworkingManager.m in Sources */,
@@ -759,6 +771,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F205E1E81E04B2CE007E1CE8 /* FRSLandingVCTests.m in Sources */,
+				F205E1ED1E04B57F007E1CE8 /* FRSCardTestCase.m in Sources */,
 				F204D1F81BD60460000C164B /* FlightReservationSystemTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

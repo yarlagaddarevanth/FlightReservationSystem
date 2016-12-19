@@ -11,6 +11,7 @@ pod 'JSONModel'
 pod 'MBProgressHUD', '~> 0.9.1'
 pod 'Fabric'
 pod 'Crashlytics'
+pod 'Swizzlean'
 
 end
 
